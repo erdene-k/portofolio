@@ -5,9 +5,10 @@ import Loader from '../components/Loader'
 import Sky from '../models/Sky'
 import Bird from '../models/Bird'
 import Plane from '../models/Plane'
+import HomeInfo from '../components/HomeInfo'
 const Home = () => {
   const [isRotating, setRotating ] = useState(false)
-
+  const [currentStage, setCurrentStage] = useState(1)
   const adjustIslandForScreenSize = () =>{
     let screenScale;
     const screenPos = [0, -6.5, -43]
@@ -39,25 +40,43 @@ const Home = () => {
   const[planeScreenScale, planeScreenPos] = adjustPlaneForScreenSize()
   return (
     <section className="w-full h-screen relative">
-
-    <Suspense fallback={<Loader/>}>
-    <Canvas className={`w-full h-screen bg-transparent  ${isRotating ? 'cursor-grabbing': 'cursor-grab'}`}
-      camera={{near:0.1, far:1000}}>
-        <directionalLight position={[1,1,1]} intensity={2}/>
-        <ambientLight intensity={0.5} />
-        <hemisphereLight skyColor='#b1e1ff' intensity={1} groundColor="#000"/>
-        <Sky/>
-        <Island position={screenPos} scale={screenScale} rotation={rotation} isRotating={isRotating} setRotating={setRotating}/>
-        <Bird/>
-        <Plane  position={planeScreenPos} scale={planeScreenScale} rotation={[0,20,0]}  />
-      </Canvas>
-    </Suspense>
+        <div className="absolute top-28 left-0 right-0 z-10 flex items-center justify-center">
+        <HomeInfo currentStage={currentStage}/>
+      </div>
+      <Suspense fallback={<Loader />}>
+        <Canvas
+          className={`w-full h-screen bg-transparent  ${
+            isRotating ? "cursor-grabbing" : "cursor-grab"
+          }`}
+          camera={{ near: 0.1, far: 1000 }}
+        >
+          <directionalLight position={[1, 1, 1]} intensity={2} />
+          <ambientLight intensity={0.5} />
+          <hemisphereLight
+            skyColor="#b1e1ff"
+            intensity={1}
+            groundColor="#000"
+          />
+          <Sky isRotating={isRotating} />
+          <Island
+            position={screenPos}
+            scale={screenScale}
+            rotation={rotation}
+            isRotating={isRotating}
+            setRotating={setRotating}
+          />
+          <Bird />
+          <Plane
+            isRotating={isRotating}
+            position={planeScreenPos}
+            rotation={[0, 20.1, 0]}
+            scale={planeScreenScale}
+          />
+        </Canvas>
+      </Suspense>
     </section>
-  )
+  );
 }
 
 export default Home
 
-      {/* <div className="absolute top-28 left-0 right-0 z-10 flex items-center justify-center">
-        PopUp
-      </div> */}
