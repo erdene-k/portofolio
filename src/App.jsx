@@ -5,7 +5,7 @@ import Home from './pages/Home'
 function App() {
 
   return (
-    <main className="bg-slate-300/20">
+    <main className="bg-slate-100">
       <Router>
         <Navbar/>
         <Routes>
