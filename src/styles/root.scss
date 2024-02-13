@@ -1,0 +1,77 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&display=swap");
+
+:root {
+  --main-color: #2064a0;
+  --second-color: #f7f8fc;
+  --color-white: #fff;
+  --main-font: "Nunito", sans-serif;
+  --text-color-dark: #2e3e5c;
+  --text-color-mid: #4d6082;
+  --text-color-gray: #82869b;
+  --text-color-orange: #e67e22;
+}
+.ant-switch[aria-checked="true"] {
+  background-color: rgba(35, 193, 101, 1) !important;
+}
+
+.layout-header-main {
+  // position: sticky;
+  top: 0;
+  // z-index: 1;
+  display: flex;
+  align-items: center;
+
+  margin-left: 250;
+
+  justify-content: flex-end;
+}
+
+.layout-content-main {
+  margin-left: 250px;
+  overflow: auto;
+  padding: 0 24px 20px;
+}
+
+//dooshoo bitgii hur ------>
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--main-font) !important;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+body {
+  font-family: var(--main-font) !important;
+  background-color: var(--second-color);
+}
+
+$mobile-width: 320px;
+$tablet-width: 768px;
+$desktop-width: 1024px;
+
+@mixin mobile {
+  @media (min-width: #{$mobile-width}) and (max-width: #{$tablet-width - 1px}) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: #{$tablet-width}) and (max-width: #{$desktop-width - 1px}) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: #{$desktop-width}) {
+    @content;
+  }
+}
+

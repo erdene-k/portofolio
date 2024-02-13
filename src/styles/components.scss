@@ -1,0 +1,70 @@
+nav {
+    position: absolute;
+    top: 0%;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    color: white;
+    padding: 10px 20px;
+
+    left:50%;
+    margin: 27px;
+    min-height: 50px;
+    background-color: #34495e;
+    border-radius: 8px;
+
+  }
+  nav a {
+    line-height: 50px;
+    height: 100%;
+    font-size: 15px;
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+    text-decoration: none;
+    text-transform: uppercase;
+    text-align: center;
+    color: white;
+    cursor: pointer;
+    &.active{
+        color: red;
+    }
+  }
+  nav .animation {
+    position: absolute;
+    height: 100%;
+    top: 0;
+    z-index: 0;
+    transition: all .5s ease 0s;
+    border-radius: 8px;
+  }
+  
+  a:nth-child(n) {
+    width: max-content;
+    margin: 10px;
+  }
+ 
+  nav .start-home, a:nth-child(1):hover~.animation {
+    width: 90px;
+    left: 0;
+    background-color: #1abc9c;
+  }
+  nav .start-about, a:nth-child(2):hover~.animation {
+    width: 60px;
+    left: 90px;
+    background-color: #e74c3c;
+  }
+  nav .start-blog, a:nth-child(3):hover~.animation {
+    width: 100px;
+    left: 150px;
+    background-color: #3498db;
+  }
+  nav .start-portefolio, a:nth-child(4):hover~.animation {
+    width: 100px;
+    left: 250px;
+    background-color: #9b59b6;
+  }
+  nav .start-home, a:nth-child(0):hover~.animation {
+    width: 90px;
+    left: 0;
+    background-color: #34495e;
+  }
