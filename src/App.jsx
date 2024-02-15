@@ -5,7 +5,7 @@ import './styles/main.scss'
 function App() {
 
   return (
-    <main >
+    <main>
       <Router>
         <Navbar/>
         <Routes>

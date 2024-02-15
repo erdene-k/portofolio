@@ -5,7 +5,6 @@ import Loader from "../components/Loader";
 import IsometricModel from "../models/IsometricModel";
 const Home = () => {
   const [isRotating, setRotating] = useState(false);
-  const [currentStage, setCurrentStage] = useState(1);
   const adjustIslandForScreenSize = () => {
     let screenScale = [4, 4, 4];
     const screenPos = [0, 0, -100];
@@ -18,39 +17,33 @@ const Home = () => {
     return [screenScale, screenPos, rotation];
   };
 
-  const adjustPlaneForScreenSize = () => {
-    let screenScale, screenPos;
-    if (window.innerWidth < 820) {
-      screenScale = [1.5, 1.5, 1.5];
-      screenPos = [0, -1.5, 0];
-    } else {
-      screenScale = [3, 3, 3];
-      screenPos = [0, -4, -4];
-    }
-    return [screenScale, screenPos, rotation];
-  };
+  // const adjustPlaneForScreenSize = () => {
+  //   let screenScale, screenPos;
+  //   if (window.innerWidth < 820) {
+  //     screenScale = [1.5, 1.5, 1.5];
+  //     screenPos = [0, -1.5, 0];
+  //   } else {
+  //     screenScale = [3, 3, 3];
+  //     screenPos = [0, -4, -4];
+  //   }
+  //   return [screenScale, screenPos, rotation];
+  // };
 
   const [screenScale, screenPos, rotation] = adjustIslandForScreenSize();
-  const [planeScreenScale, planeScreenPos] = adjustPlaneForScreenSize();
+
   return (
-    <section className="">
-        <div className="flex w-full h-screen ">
-        <div className="w-2/4 h-3/4 p-10">
-     <Suspense fallback={<Loader />}>
-        <Canvas
-          className={`w-full h-screen bg-transparent  ${
-            isRotating ? "cursor-grabbing" : "cursor-grab"
-          }`}
-          camera={{ near: 0.1, far: 1000 }}
-        >
-          <directionalLight position={[1, 1, 1]} intensity={2} />
-          <ambientLight intensity={0.5} />
-          <hemisphereLight
-            skyColor="#b1e1ff"
-            intensity={1}
-            groundColor="#000"
-          />
-          {/* <Sky isRotating={isRotating} />
+    <section className="home-page">
+      <div className="canvas-container">
+        <Suspense fallback={<Loader />}>
+          <Canvas camera={{ near: 0.1, far: 1000 }}>
+            <directionalLight position={[1, 1, 1]} intensity={2} />
+            <ambientLight intensity={0.5} />
+            <hemisphereLight
+              skyColor="#b1e1ff"
+              intensity={1}
+              groundColor="#000"
+            />
+            {/* <Sky isRotating={isRotating} />
           <Island
             position={screenPos}
             scale={screenScale}
@@ -65,17 +58,17 @@ const Home = () => {
             rotation={[0, 20.1, 0]}
             scale={planeScreenScale}
           /> */}
-          <IsometricModel
-            position={screenPos}
-            scale={screenScale}
-            rotation={rotation}
-            isRotating={isRotating}
-            setRotating={setRotating}
-          />
-        </Canvas>
-      </Suspense>
-     </div>
-        </div>
+            <IsometricModel
+              position={screenPos}
+              scale={screenScale}
+              rotation={rotation}
+              isRotating={isRotating}
+              setRotating={setRotating}
+              className="isometric"
+            />
+          </Canvas>
+        </Suspense>
+      </div>
     </section>
   );
 };

@@ -5,6 +5,7 @@ import { useFrame, useThree } from "@react-three/fiber";
 import islandScene from "../assets/3d/isometric.glb";
 import { a } from "@react-spring/three";
 
+// eslint-disable-next-line react/prop-types
 const IsometricModel = ({ isRotating, setRotating, ...props }) => {
   const islandRef = useRef();
   const { nodes, materials } = useGLTF(islandScene);
@@ -82,7 +83,6 @@ const IsometricModel = ({ isRotating, setRotating, ...props }) => {
     }
     if (Math.abs(rotationSpeed.current < 0.001)) {
       rotationSpeed.current = 0;
-    } else {
     }
   });
   return (
