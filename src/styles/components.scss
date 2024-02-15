@@ -9,7 +9,7 @@ nav {
     left:50%;
     margin: 27px;
     min-height: 50px;
-    background-color: #34495e;
+    background-color: #e0fbfc;
     border-radius: 8px;
 
   }
@@ -23,10 +23,10 @@ nav {
     text-decoration: none;
     text-transform: uppercase;
     text-align: center;
-    color: white;
+    color: #3d5a80;
     cursor: pointer;
     &.active{
-        color: red;
+        color: #ee6c4d;
     }
   }
   nav .animation {
@@ -66,5 +66,5 @@ nav {
   nav .start-home, a:nth-child(0):hover~.animation {
     width: 90px;
     left: 0;
-    background-color: #34495e;
+    background-color: #e0fbfc;
   }
