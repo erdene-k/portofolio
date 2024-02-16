@@ -33,10 +33,13 @@ const Home = () => {
 
   return (
     <section className="home-page">
-      <h1>Kami sama</h1>
+      <div className="header"></div>
+      <h1>Erdenechuluun KHUDERCHULUUN</h1>
 
       <div className="canvas-container">
-        <Suspense fallback={<Loader />}>
+        {/* <Suspense fallback={<Loader />}>   </Suspense>*/}
+        <div className="canvas-content">
+          <h2>Software Developer</h2>
           <Canvas camera={{ near: 0.1, far: 1000 }}>
             <directionalLight position={[1, 1, 1]} intensity={2} />
             <ambientLight intensity={0.5} />
@@ -69,42 +72,41 @@ const Home = () => {
               className="isometric"
             />
           </Canvas>
-          <div className="info-text">
-            <p>
-              Lorem ipsum dolor sit Lorem ipsum dolor sit amet consectetur
-              adipisicing elit. Totam perspiciatis veritatis commodi ducimus
-              quaerat qui quas? Consectetur harum ipsam excepturi qui
-              voluptatibus accusamus, repellendus fugit! Dolorum doloribus omnis
-              possimus laboriosam. amet consecte Lorem ipsum dolor sit amet
-              consectetur, adipisicing elit. Aperiam eveniet nam fuga
-              reiciendis, harum ab quis atque neque quibusdam veniam beatae
-              porro incidunt nihil cupiditate explicabo earum quia! Sapiente,
-              non!tur adipisic Lorem ipsum dolor sit amet consectetur
-              adipisicing elit. Accusamus amet fugiat ratione beatae illum quam
-              reiciendis architecto atque dignissimos. Est autem, voluptatem
-              amet necessitatibus aut excepturi odio odit distinctio earum!ing
-              elit. Officiis repellendus totam, quaerat sit corporis a culpa
-              eveniet sed ex voluptate quasi explicabo cupiditate incidunt
-              nesciunt vitae. Numquam reprehenderit debitis sapiente? Lorem
-              ipsum dolor sit amet consectetur adipisicing elit. Quis culpa
-              minus numquam! Unde molestias, impedit voluptate cumque, fugit
-              possimus laborum quidem voluptatem, repellat alias perspiciatis
-              illo tempore dolore explicabo nemo.
-            </p>
-          </div>
-        </Suspense>
+        </div>
+
+        <div className="info-text">
+          <p>
+            Lorem ipsum dolor sit Lorem ipsum dolor sit amet consectetur
+            adipisicing elit. Totam perspiciatis veritatis commodi ducimus
+            quaerat qui quas? Consectetur harum ipsam excepturi qui voluptatibus
+            accusamus, repellendus fugit! Dolorum doloribus omnis possimus
+            laboriosam. amet consecte Lorem ipsum dolor sit amet consectetur,
+            adipisicing elit. Aperiam eveniet nam fuga reiciendis, harum ab quis
+            atque neque quibusdam veniam beatae porro incidunt nihil cupiditate
+            explicabo earum quia! Sapiente, non!tur adipisic Lorem ipsum dolor
+            sit amet consectetur adipisicing elit. Accusamus amet fugiat ratione
+            beatae illum quam reiciendis architecto atque dignissimos. Est
+            autem, voluptatem amet necessitatibus aut excepturi odio odit
+            distinctio earum!ing elit. Officiis repellendus totam, quaerat sit
+            corporis a culpa eveniet sed ex voluptate quasi explicabo cupiditate
+            incidunt nesciunt vitae. Numquam reprehenderit debitis sapiente?
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis culpa
+            minus numquam! Unde molestias, impedit voluptate cumque, fugit
+            possimus laborum quidem voluptatem, repellat alias perspiciatis illo
+            tempore dolore explicabo nemo.
+          </p>
+        </div>
       </div>
-      <div className="section over-hide px-4 px-sm-0">
+      <div className="section full-height over-hide px-4 px-sm-0">
         <div className="container">
-          <div className="full-width row justify-content-center">
-            <div className="full-width align-self-center padding-tb">
+          <div className="row full-height justify-content-center">
+            <div className="col-lg-10 col-xl-8 align-self-center padding-tb">
               <div className="section mx-auto text-center slider-height-padding">
                 <input
                   className="checkbox frst"
                   type="radio"
                   id="slide-1"
                   name="slider"
-                  checked
                 />
                 <label htmlFor="slide-1"></label>
                 <input
@@ -139,9 +141,7 @@ const Home = () => {
                     <span>SHY PORTRAIT</span>
                   </li>
                   <li>
-                    <span>SKATEBOARD FACE
-                      asdf
-                    </span>
+                    <span>SKATEBOARD FACE</span>
                   </li>
                 </ul>
               </div>

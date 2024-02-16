@@ -1,5 +1,5 @@
 nav {
-    position: absolute;
+    position:fixed;
     top: 0%;
     left: 50%;
     transform: translate(-50%, 0%);
@@ -17,7 +17,6 @@ nav {
     line-height: 50px;
     height: 100%;
     font-size: 15px;
-    display: inline-block;
     position: relative;
     z-index: 1;
     text-decoration: none;

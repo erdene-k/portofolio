@@ -12,7 +12,18 @@
 }
 
 
-
+.😀{
+  background-color: aquamarine;
+  width: 100%;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  .emoji-box{
+    background-color: lighten(aquamarine, 10%);
+    width: clamp(45ch, 50%, 75ch);
+    // width: clamp(100px, 50%, 1300px);
+  }
+}
 //dooshoo bitgii hur ------>
 
 * {
