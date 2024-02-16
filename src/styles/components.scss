@@ -10,7 +10,7 @@ nav {
     margin: 27px;
     min-height: 50px;
     background-color: rgba(224, 251, 252, 0.8);
-    border-radius: 8px;
+    border-radius: 20px;
 
   }
   nav a {
@@ -35,7 +35,7 @@ nav {
     top: 0;
     z-index: 0;
     transition: all .5s ease 0s;
-    border-radius: 8px;
+    border-radius: 20px;
   }
   
   a:nth-child(n) {

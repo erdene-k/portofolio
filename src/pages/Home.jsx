@@ -96,8 +96,8 @@ const Home = () => {
       </div>
       <div className="section over-hide px-4 px-sm-0">
         <div className="container">
-          <div className="row justify-content-center">
-            <div className="col-lg-10 col-xl-8 align-self-center padding-tb">
+          <div className="full-width row justify-content-center">
+            <div className="full-width align-self-center padding-tb">
               <div className="section mx-auto text-center slider-height-padding">
                 <input
                   className="checkbox frst"
