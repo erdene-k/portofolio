@@ -1,6 +1,5 @@
 .home-page {
     margin-top: 120px;
-
     width: 100%;
     h1 {
       text-align: center;
@@ -39,11 +38,6 @@
         font-size: 1em;
       }
     }
-  
- 
-  
-  
-   
 a {
 	cursor: pointer;
 }
@@ -54,7 +48,12 @@ a:hover {
 .section{
   position: relative;
   width: 100%;
-  display: block;
+  display: flex;
+  justify-content: center;
+  
+}
+.slider-container{
+  width: clamp(400px, 64%, 80vw);
 }
 .full-height{
   min-height: 100vh;

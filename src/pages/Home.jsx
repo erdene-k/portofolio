@@ -6,7 +6,7 @@ import IsometricModel from "../models/IsometricModel";
 const Home = () => {
   const [isRotating, setRotating] = useState(false);
   const adjustIslandForScreenSize = () => {
-    let screenScale = [4, 4, 4];
+    let screenScale = [5.5, 5.5, 5.5];
     const screenPos = [0, 0, -100];
     let rotation = [0.5, -0.8, 0];
     // if (window.innerWidth < 768) {
@@ -97,12 +97,13 @@ const Home = () => {
           </p>
         </div>
       </div>
-      <div className="section full-height over-hide px-4 px-sm-0">
-        <div className="container">
+      <div className="section full-height over-hide">
+        <div className="slider-container">
           <div className="row full-height justify-content-center">
             <div className="col-lg-10 col-xl-8 align-self-center padding-tb">
               <div className="section mx-auto text-center slider-height-padding">
                 <input
+                checked
                   className="checkbox frst"
                   type="radio"
                   id="slide-1"
