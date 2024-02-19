@@ -124,13 +124,7 @@ const Home = () => {
                   id="slider-3"
                 />
                 <label htmlFor="slider-3"></label>
-                <input
-                  className="checkbox foth"
-                  type="radio"
-                  name="slider"
-                  id="slider-4"
-                />
-                <label htmlFor="slider-4"></label>
+    
                 <ul>
                   <li>
                     <span>MALE GOOFY FACE</span>
