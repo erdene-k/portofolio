@@ -39,7 +39,7 @@ const Home = () => {
       <div className="canvas-container">
         {/* <Suspense fallback={<Loader />}>   </Suspense>*/}
         <div className="canvas-content">
-          <h2>Software Developer</h2>
+
           <Canvas camera={{ near: 0.1, far: 1000 }}>
             <directionalLight position={[1, 1, 1]} intensity={2} />
             <ambientLight intensity={0.5} />
@@ -72,6 +72,7 @@ const Home = () => {
               className="isometric"
             />
           </Canvas>
+          https://codepen.io/jgarrow/pen/JjKaMVy
         </div>
 
         <div className="info-text">
@@ -95,6 +96,7 @@ const Home = () => {
             possimus laborum quidem voluptatem, repellat alias perspiciatis illo
             tempore dolore explicabo nemo.
           </p>
+        
         </div>
       </div>
       <div className="section full-height over-hide">
@@ -127,7 +129,8 @@ const Home = () => {
     
                 <ul>
                   <li>
-                    <span>MALE GOOFY FACE</span>
+                    <span>Projects:</span>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente culpa laborum blanditiis qui id sequi hic architecto officia! Nemo at aspernatur reprehenderit, enim ipsam dolores expedita fuga inventore deserunt eius?</p>
                   </li>
                   <li>
                     <span>TOY PIG</span>

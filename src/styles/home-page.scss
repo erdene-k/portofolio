@@ -30,10 +30,11 @@
       margin: 0 20px;
       width: clamp(280px, 50%, 30vw);
       height: 40vh;
-      box-shadow: rgba(255, 255, 255, 0.5) 0px 5px 15px;
-      background-color: rgba(46, 62, 92, 0.9);
+      box-shadow: #343434 0px 2px 8px;
+      background-color: transparent;
       border-radius: 20px;
       position: relative;
+      border: 3px solid #bdc3c7;
     }
 
     .info-text {
@@ -179,14 +180,14 @@
     width: 100%;
     display: block;
     z-index: 100;
-    padding: 0;
+    padding: 20px;
     margin: 0;
     list-style: none;
     height: 400px;
     border: 5px solid #bdc3c7;
     background-size: cover;
     background-position: center;
-    background-image: url('https://assets.codepen.io/1462889/sl1.jpg');
+
     border-radius: 50%;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
@@ -195,7 +196,7 @@
     letter-spacing: 2px;
     line-height: 2.7;
     color: #343434;
-    writing-mode: vertical-rl;
+   
     opacity: 0;
     pointer-events: none;
     box-shadow: 0 8px 25px 0 rgba(16, 39, 112, .1);
@@ -207,13 +208,6 @@
     mix-blend-mode: difference;
   }
 
-  ul li:nth-child(2) {
-    background-image: url('https://assets.codepen.io/1462889/sl2.jpg');
-  }
-
-  ul li:nth-child(3) {
-    background-image: url('https://assets.codepen.io/1462889/sl3.jpg');
-  }
 
 
 
