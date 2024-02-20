@@ -1,4 +1,5 @@
 import { NavLink } from "react-router-dom";
+import ToggleButton from "./ToggleButton";
 const Navbar = () => {
   return (
     <header className="header">
@@ -11,21 +12,8 @@ const Navbar = () => {
         <NavLink to="/contact">Contact</NavLink>
         <NavLink to="/projects">Projects</NavLink>
         <div className="animation start-home"></div>
-       
       </nav>
-      <div className="toggle-button">
-      <button
-          className="container"
-          aria-label="Toggle color mode"
-          title="Toggle color mode"
-        >
-          <div className="sun visible"></div>
-          <div className="moon">
-            <div className="star"></div>
-            <div className="star small"></div>
-          </div>
-        </button>
-      </div>
+      <ToggleButton/>
     </header>
   );
 };
