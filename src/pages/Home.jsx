@@ -72,7 +72,7 @@ const Home = () => {
               className="isometric"
             />
           </Canvas>
-          https://codepen.io/jgarrow/pen/JjKaMVy
+        
         </div>
 
         <div className="info-text">
