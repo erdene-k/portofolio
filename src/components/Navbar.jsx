@@ -1,5 +1,5 @@
-import { NavLink } from "react-router-dom";
 import ToggleButton from "./ToggleButton";
+import {HashLink as Link} from 'react-router-hash-link'
 const Navbar = () => {
   return (
     <header className="header">
@@ -7,10 +7,10 @@ const Navbar = () => {
         <p className=''>EK</p>
         </NavLink> */}
       <nav className="">
-        <NavLink to="/">Home</NavLink>
-        <NavLink to="/about">About</NavLink>
-        <NavLink to="/contact">Contact</NavLink>
-        <NavLink to="/projects">Projects</NavLink>
+        <Link to="#gg">Home</Link>
+        <Link to="/about">About</Link>
+        <Link to="/contact">Contact</Link>
+        <Link to="/projects">Projects</Link>
         <div className="animation start-home"></div>
       </nav>
       <ToggleButton/>

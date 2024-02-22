@@ -1,8 +1,9 @@
 import { Suspense, useState } from "react";
 import { Canvas } from "@react-three/fiber";
 
-import Loader from "../components/Loader";
 import IsometricModel from "../models/IsometricModel";
+import { BrowserRouter } from "react-router-dom";
+import Navbar from '../components/Navbar'
 const Home = () => {
   const [isRotating, setRotating] = useState(false);
   const adjustIslandForScreenSize = () => {
@@ -17,25 +18,17 @@ const Home = () => {
     return [screenScale, screenPos, rotation];
   };
 
-  // const adjustPlaneForScreenSize = () => {
-  //   let screenScale, screenPos;
-  //   if (window.innerWidth < 820) {
-  //     screenScale = [1.5, 1.5, 1.5];
-  //     screenPos = [0, -1.5, 0];
-  //   } else {
-  //     screenScale = [3, 3, 3];
-  //     screenPos = [0, -4, -4];
-  //   }
-  //   return [screenScale, screenPos, rotation];
-  // };
+
 
   const [screenScale, screenPos, rotation] = adjustIslandForScreenSize();
 
   return (
-    <section className="home-page">
+    <BrowserRouter>
+    <Navbar/>
+      <section className="home-page">
       <div className="header"></div>
-      <h1>Erdenechuluun KHUDERCHULUUN</h1>
-
+ 
+      
       <div className="canvas-container">
         {/* <Suspense fallback={<Loader />}>   </Suspense>*/}
         <div className="canvas-content">
@@ -48,21 +41,7 @@ const Home = () => {
               intensity={1}
               groundColor="#000"
             />
-            {/* <Sky isRotating={isRotating} />
-          <Island
-            position={screenPos}
-            scale={screenScale}
-            rotation={rotation}
-            isRotating={isRotating}
-            setRotating={setRotating}
-          />
-          <Bird />
-          <Plane
-            isRotating={isRotating}
-            position={planeScreenPos}
-            rotation={[0, 20.1, 0]}
-            scale={planeScreenScale}
-          /> */}
+
             <IsometricModel
               position={screenPos}
               scale={screenScale}
@@ -75,7 +54,7 @@ const Home = () => {
         
         </div>
 
-        <div className="info-text">
+        <div className="info-text">     <b>Erdenechuluun KHUDERCHULUUN</b>
           <p>
             Lorem ipsum dolor sit Lorem ipsum dolor sit amet consectetur
             adipisicing elit. Totam perspiciatis veritatis commodi ducimus
@@ -148,7 +127,12 @@ const Home = () => {
         </div>
       </div>
     </section>
+    <div id="gg" style={{backgroundColor:"red", height:100}}></div>
+    </BrowserRouter>
+  
   );
 };
 
 export default Home;
+
+

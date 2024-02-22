@@ -5,25 +5,9 @@
   --second-color: #f7f8fc;
   --color-white: #fff;
   --main-font: "Nunito", sans-serif;
-  // --text-color-dark: rgba(46, 62, 92, 1);
-  // --text-color-mid: #4d6082;
-  // --text-color-gray: #82869b;
-  // --text-color-orange: #e67e22;
+
 }
 
-
-.😀{
-  background-color: aquamarine;
-  width: 100%;
-  justify-content: center;
-  display: flex;
-  align-items: center;
-  .emoji-box{
-    background-color: lighten(aquamarine, 10%);
-    width: clamp(45ch, 50%, 75ch);
-    // width: clamp(100px, 50%, 1300px);
-  }
-}
 //dooshoo bitgii hur ------>
 
 * {
@@ -31,6 +15,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: var(--main-font) !important;
+  scroll-behavior: smooth;
 }
 
 html,
@@ -43,6 +28,7 @@ body {
 body {
   font-family: var(--main-font) !important;
   background-color: var(--second-color);
+  
 }
 
 $mobile-width: 320px;
