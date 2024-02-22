@@ -3,19 +3,26 @@ import {HashLink as Link} from 'react-router-hash-link'
 const Navbar = () => {
   return (
     <header className="header">
-      {/* <NavLink to="/" className="">
-        <p className=''>EK</p>
-        </NavLink> */}
-      <nav className="">
-        <Link to="#gg">Home</Link>
-        <Link to="/about">About</Link>
-        <Link to="/contact">Contact</Link>
-        <Link to="/projects">Projects</Link>
-        <div className="animation start-home"></div>
+      <nav >
+        <ul>
+        <li> <Link to="#gg">Home</Link></li>
+        <li> <Link to="#gg">About</Link></li>
+        <li> <Link to="#gg">Project</Link></li>
+        <li> <Link to="#gg">Contact</Link></li>
+        <li><ToggleButton/></li>
+        </ul>
+    
+        <ul className="sidebar">
+        <li> <Link to="#gg">Home</Link></li>
+        <li> <Link to="#gg">About</Link></li>
+        <li> <Link to="#gg">Project</Link></li>
+        <li> <Link to="#gg">Contact</Link></li>
+        <li><ToggleButton/></li>
+        </ul>
       </nav>
-      <ToggleButton/>
     </header>
   );
 };
 
 export default Navbar;
+//   <div className="animation start-home"></div>

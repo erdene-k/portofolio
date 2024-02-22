@@ -3,7 +3,7 @@ import './styles/main.scss'
 function App() {
 
   return (
- <Home/>
+  <Home/>
   );
 }
 

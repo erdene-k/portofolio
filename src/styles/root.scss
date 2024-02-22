@@ -23,14 +23,15 @@ body {
   margin: 0;
   padding: 0;
   overflow-x: hidden;
-}
-
-body {
-  font-family: var(--main-font) !important;
-  background-color: var(--second-color);
   
 }
+a {
+  cursor: pointer;
+}
 
+a:hover {
+  text-decoration: none;
+}
 $mobile-width: 320px;
 $tablet-width: 768px;
 $desktop-width: 1024px;
@@ -53,10 +54,3 @@ $desktop-width: 1024px;
   }
 }
 
-main {
-  display: flex;
-  flex-wrap: wrap;
-  min-height: 100vh;
-  min-width: 100vw;
-  background-color: #f5ebe0;
-}

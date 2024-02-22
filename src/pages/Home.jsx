@@ -24,7 +24,10 @@ const Home = () => {
 
   return (
     <BrowserRouter>
-    <Navbar/>
+      
+        <Navbar/>
+     
+  
       <section className="home-page">
       <div className="header"></div>
  
