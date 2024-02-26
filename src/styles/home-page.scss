@@ -1,39 +1,23 @@
 .home-page {
-  margin-top: 20px;
+  padding-top: 120px;
   min-height: 100vh;
+  background-color: #e8e8e8;
 
-
-  .canvas-container {
+  .canvas-content {
     display: flex;
-    width: 100%;
     justify-content: center;
-    gap: 1em;
-
-    @include mobile {
-      display: block;
-    }
-
-    .canvas-content {
+    height: 500px;
+    flex-direction: column;
+    align-items: center;
+    canvas {
       cursor: pointer;
-      padding: 20px;
-      margin: 0 20px;
-      width: clamp(280px, 50%, 30vw);
-      height: 40vh;
-      box-shadow: #343434 0px 2px 8px;
-      background-color: transparent;
-      border-radius: 20px;
-      position: relative;
-      border: 3px solid #bdc3c7;
-    }
-
-    .info-text {
-      margin: 0 2em;
-      text-align: justify;
-      width: clamp(50ch, 30%, 100ch);
-      font-size: 1em;
     }
   }
+  .info-text{
+    text-align: justify;
+    max-width: 100ch;
+    font-size: 1em;
 
-
+  }
 
 }

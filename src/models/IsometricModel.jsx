@@ -7,6 +7,7 @@ import { a } from "@react-spring/three";
 
 // eslint-disable-next-line react/prop-types
 const IsometricModel = ({ isRotating, setRotating, ...props }) => {
+
   const islandRef = useRef();
   const { nodes, materials } = useGLTF(islandScene);
   const { gl, viewport } = useThree();
