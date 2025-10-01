@@ -1,0 +1,749 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Erdene - Senior Backend Developer</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Animated Background -->
+    <div class="animated-bg">
+        <canvas id="bgCanvas"></canvas>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span class="logo-text">Erdene K </span>
+                <div class="logo-glow"></div>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#experience" class="nav-link">Experience</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <div class="badge-icon">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 2L13.09 8.26L22 9L13.09 9.74L12 16L10.91 9.74L2 9L10.91 8.26L12 2Z"/>
+                        </svg>
+                    </div>
+                    <span>Available for new opportunities</span>
+                    <div class="badge-pulse"></div>
+                </div>
+                <h1 class="hero-title">
+                    <span class="title-greeting">Hello, I'm</span>
+                    <span class="title-name">Erdene</span>
+                    <span class="title-role">Senior Backend Developer</span>
+                </h1>
+                <p class="hero-description">
+                    Passionate about crafting scalable backend solutions and innovative fintech applications. 
+                    I transform complex business requirements into elegant, high-performance systems that 
+                    empower users and drive digital transformation.
+                </p>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <span class="stat-number">4+</span>
+                        <span class="stat-label">Years Experience</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">500K+</span>
+                        <span class="stat-label">Users Impacted</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">15+</span>
+                        <span class="stat-label">Projects</span>
+                    </div>
+                </div>
+                <div class="hero-buttons">
+                    <a href="#contact" class="btn btn-primary">
+                        <span>Get In Touch</span>
+                        <div class="btn-glow"></div>
+                    </a>
+                    <a href="#projects" class="btn btn-secondary">
+                        <span>View Work</span>
+                    </a>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="hero-3d-container">
+                    <canvas id="hero3D" class="hero-canvas"></canvas>
+                    <div class="floating-elements">
+                        <div class="floating-element" data-speed="2">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M20,18C20.5,18 21,17.5 21,17V7C21,6.5 20.5,6 20,6H4C3.5,6 3,6.5 3,7V17C3,17.5 3.5,18 4,18H20M20,4C21.11,4 22,4.89 22,6V18C22,19.11 21.11,20 20,20H4C2.89,20 2,19.11 2,18V6C2,4.89 2.89,4 4,4H20M5,8H19V16H5V8Z"/>
+                            </svg>
+                        </div>
+                        <div class="floating-element" data-speed="3">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M7,2V4H8V18A4,4 0 0,0 12,22A4,4 0 0,0 16,18V4H17V2H7M11,16C10.4,16 10,15.6 10,15C10,14.4 10.4,14 11,14C11.6,14 12,14.4 12,15C12,15.6 11.6,16 11,16M13,12C12.4,12 12,11.6 12,11C12,10.4 12.4,10 13,10C13.6,10 14,10.4 14,11C14,11.6 13.6,12 13,12M14,7H10V4H14V7Z"/>
+                            </svg>
+                        </div>
+                        <div class="floating-element" data-speed="1.5">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12,2A10,10 0 0,1 22,12A10,10 0 0,1 12,22A10,10 0 0,1 2,12A10,10 0 0,1 12,2M12,4A8,8 0 0,0 4,12A8,8 0 0,0 12,20A8,8 0 0,0 20,12A8,8 0 0,0 12,4M12,6A6,6 0 0,1 18,12A6,6 0 0,1 12,18A6,6 0 0,1 6,12A6,6 0 0,1 12,6M12,8A4,4 0 0,0 8,12A4,4 0 0,0 12,16A4,4 0 0,0 16,12A4,4 0 0,0 12,8Z"/>
+                            </svg>
+                        </div>
+                        <div class="floating-element" data-speed="2.5">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M2.81,14.12L5.64,11.29L8.47,14.12L7.06,15.54L3.5,12L7.06,8.46L8.47,9.88L5.64,12.71L2.81,9.88L1.39,11.29L2.81,14.12M21.61,11.29L18.78,14.12L15.95,11.29L17.36,9.88L20.92,13.42L17.36,16.96L15.95,15.54L18.78,12.71L21.61,15.54L23.03,14.12L21.61,11.29M14.27,7L9.12,18.25L7.73,17.75L12.88,6.5L14.27,7Z"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="hero-particles">
+                        <div class="particle"></div>
+                        <div class="particle"></div>
+                        <div class="particle"></div>
+                        <div class="particle"></div>
+                        <div class="particle"></div>
+                        <div class="particle"></div>
+                        <div class="particle"></div>
+                        <div class="particle"></div>
+                    </div>
+                    <div class="hero-glow-effects">
+                        <div class="glow-orb glow-orb-1"></div>
+                        <div class="glow-orb glow-orb-2"></div>
+                        <div class="glow-orb glow-orb-3"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="scroll-mouse">
+                <div class="scroll-wheel"></div>
+            </div>
+            <span>Scroll Down</span>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Get to know me</span>
+                <h2 class="section-title">About Me</h2>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <div class="about-card">
+                        <div class="card-header">
+                            <svg viewBox="0 0 24 24" fill="currentColor" class="card-icon">
+                                <path d="M12,2A2,2 0 0,1 14,4C14,4.74 13.6,5.39 13,5.73V7H14A7,7 0 0,1 21,14H22A1,1 0 0,1 23,15V18A1,1 0 0,1 22,19H21V20A2,2 0 0,1 19,22H5A2,2 0 0,1 3,20V19H2A1,1 0 0,1 1,18V15A1,1 0 0,1 2,14H3A7,7 0 0,1 10,7H11V5.73C10.4,5.39 10,4.74 10,4A2,2 0 0,1 12,2M7.5,13A0.5,0.5 0 0,0 7,13.5A0.5,0.5 0 0,0 7.5,14A0.5,0.5 0 0,0 8,13.5A0.5,0.5 0 0,0 7.5,13M16.5,13A0.5,0.5 0 0,0 16,13.5A0.5,0.5 0 0,0 16.5,14A0.5,0.5 0 0,0 17,13.5A0.5,0.5 0 0,0 16.5,13Z"/>
+                            </svg>
+                            <h3>My Journey</h3>
+                        </div>
+                        <p>
+                            As a Senior Backend Developer with extensive experience in fintech and payment systems, 
+                            I specialize in building scalable, secure solutions that drive business growth. 
+                            My journey spans from frontend development to backend architecture, giving me a 
+                            comprehensive understanding of full-stack development.
+                        </p>
+                        <p>
+                            From launching mobile applications serving 500,000+ users to developing sophisticated 
+                            payment gateways and document generation systems, I bring both technical expertise 
+                            and business acumen to every project.
+                        </p>
+                    </div>
+                    <div class="education-card">
+                        <div class="card-header">
+                            <svg viewBox="0 0 24 24" fill="currentColor" class="card-icon">
+                                <path d="M12,3L1,9L12,15L21,10.09V17H23V9M5,13.18V17.18L12,21L19,17.18V13.18L12,17L5,13.18Z"/>
+                            </svg>
+                            <h3>Education & Growth</h3>
+                        </div>
+                        <div class="education-item">
+                            <div class="edu-icon">
+                                <svg viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M12,3L1,9L12,15L21,10.09V17H23V9M5,13.18V17.18L12,21L19,17.18V13.18L12,17L5,13.18Z"/>
+                                </svg>
+                            </div>
+                            <div class="edu-details">
+                                <h4>BSc in Computer Science Engineering</h4>
+                                <p>Budapest University of Technology and Economics, Hungary</p>
+                                <span>2017-2022</span>
+                            </div>
+                        </div>
+                        <div class="education-item">
+                            <div class="edu-icon">
+                                <svg viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M12,2C6.48,2 2,6.48 2,12C2,17.52 6.48,22 12,22C17.52,22 22,17.52 22,12C22,6.48 17.52,2 12,2M12,20C7.59,20 4,16.41 4,12C4,7.59 7.59,4 12,4C16.41,4 20,7.59 20,12C20,16.41 16.41,20 12,20M12,6A6,6 0 0,0 6,12A6,6 0 0,0 12,18A6,6 0 0,0 18,12A6,6 0 0,0 12,6M12,8A4,4 0 0,1 16,12A4,4 0 0,1 12,16A4,4 0 0,1 8,12A4,4 0 0,1 12,8Z"/>
+                                </svg>
+                            </div>
+                            <div class="edu-details">
+                                <h4>AFS Intercultural Program</h4>
+                                <p>I.S.I.S "GIULIO NATTA", Bergamo, Italy</p>
+                                <span>2012-2013</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-visual">
+                    <div class="about-3d-scene">
+                        <canvas id="about3D" class="about-canvas"></canvas>
+                    </div>
+                    <div class="tech-orbit">
+                        <div class="orbit-item" data-tech="java">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M8.851 18.56s-.917.534.653.714c1.902.218 2.874.187 4.969-.211 0 0 .552.346 1.321.646-4.699 2.013-10.633-.118-6.943-1.149M8.276 15.933s-1.028.761.542.924c2.032.209 3.636.227 6.413-.308 0 0 .384.389.987.602-5.679 1.661-12.007.13-7.942-1.218M13.116 11.475c1.158 1.333-.304 2.533-.304 2.533s2.939-1.518 1.589-3.418c-1.261-1.772-2.228-2.652 3.007-5.688 0-.001-8.216 2.051-4.292 6.573M19.33 20.504s.679.559-.747.991c-2.712.822-11.288 1.069-13.669.033-.856-.373.75-.89 1.254-.998.527-.114.828-.093.828-.093-.953-.671-6.156 1.317-2.643 1.887 9.58 1.553 17.462-.7 14.977-1.82M9.292 13.21s-4.362 1.036-1.544 1.412c1.189.159 3.561.123 5.77-.062 1.806-.152 3.618-.477 3.618-.477s-.637.272-1.098.587c-4.429 1.165-12.986.623-10.522-.568 2.082-1.006 3.776-.892 3.776-.892M17.116 17.584c4.503-2.34 2.421-4.589.968-4.285-.355.074-.515.138-.515.138s.132-.207.385-.297c2.875-1.011 5.086 2.981-.928 4.562 0-.001.07-.062.09-.118M14.401 0s2.494 2.494-2.365 6.33c-3.896 3.077-.888 4.832-.001 6.836-2.274-2.053-3.943-3.858-2.824-5.539 1.644-2.469 6.197-3.665 5.19-7.627M9.734 23.924c4.322.277 10.959-.153 11.116-2.198 0 0-.302.775-3.788 1.391-3.929.694-8.760.613-11.626.168 0-.001.590.489 4.298.639"/>
+                            </svg>
+                        </div>
+                        <div class="orbit-item" data-tech="node">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M11.998,24c-0.321,0-0.641-0.084-0.922-0.247l-2.936-1.737c-0.438-0.245-0.224-0.332-0.08-0.383 c0.585-0.203,0.703-0.25,1.328-0.604c0.065-0.037,0.151-0.023,0.218,0.017l2.256,1.339c0.082,0.045,0.197,0.045,0.272,0l8.795-5.076 c0.082-0.047,0.134-0.141,0.134-0.238V6.921c0-0.099-0.053-0.192-0.137-0.242l-8.791-5.072c-0.081-0.047-0.189-0.047-0.271,0 L3.075,6.68C2.99,6.729,2.936,6.825,2.936,6.921v10.15c0,0.097,0.054,0.189,0.139,0.235l2.409,1.392 c1.307,0.654,2.108-0.116,2.108-0.89V7.787c0-0.142,0.114-0.253,0.256-0.253h1.115c0.139,0,0.255,0.112,0.255,0.253v10.021 c0,1.745-0.95,2.745-2.604,2.745c-0.508,0-0.909,0-2.026-0.551L2.28,18.675c-0.57-0.329-0.922-0.945-0.922-1.604V6.921 c0-0.659,0.353-1.275,0.922-1.603l8.795-5.082c0.557-0.315,1.296-0.315,1.848,0l8.794,5.082c0.570,0.329,0.924,0.944,0.924,1.603 v10.15c0,0.659-0.354,1.273-0.924,1.604l-8.794,5.078C12.643,23.916,12.324,24,11.998,24z M19.099,13.993 c0-1.9-1.284-2.406-3.987-2.763c-2.731-0.361-3.009-0.548-3.009-1.187c0-0.528,0.235-1.233,2.258-1.233 c1.807,0,2.473,0.389,2.747,1.607c0.024,0.115,0.129,0.199,0.247,0.199h1.141c0.071,0,0.138-0.031,0.186-0.081 c0.048-0.054,0.074-0.123,0.067-0.196c-0.177-2.098-1.571-3.076-4.388-3.076c-2.508,0-4.004,1.058-4.004,2.833 c0,1.925,1.488,2.457,3.895,2.695c2.88,0.282,3.103,0.703,3.103,1.269c0,0.983-0.789,1.402-2.642,1.402 c-2.327,0-2.839-0.584-3.011-1.742c-0.02-0.124-0.126-0.215-0.253-0.215h-1.137c-0.141,0-0.254,0.112-0.254,0.253 c0,1.482,0.806,3.248,4.655,3.248C17.501,17.007,19.099,15.91,19.099,13.993z"/>
+                            </svg>
+                        </div>
+                        <div class="orbit-item" data-tech="react">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M14.23 12.004a2.236 2.236 0 0 1-2.235 2.236 2.236 2.236 0 0 1-2.236-2.236 2.236 2.236 0 0 1 2.235-2.236 2.236 2.236 0 0 1 2.236 2.236zm2.648-10.69c-1.346 0-3.107.96-4.888 2.622-1.78-1.653-3.542-2.602-4.887-2.602-.41 0-.783.093-1.106.278-1.375.793-1.683 3.264-.973 6.365C1.98 8.917 0 10.42 0 12.004c0 1.59 1.99 3.097 5.043 4.03-.704 3.113-.39 5.588.988 6.38.32.187.69.275 1.102.275 1.345 0 3.107-.96 4.888-2.624 1.78 1.654 3.542 2.603 4.887 2.603.41 0 .783-.09 1.106-.275 1.374-.792 1.683-3.263.973-6.365C22.02 15.096 24 13.59 24 12.004c0-1.59-1.99-3.097-5.043-4.032.704-3.11.39-5.587-.988-6.38-.318-.184-.688-.277-1.092-.278zm-.005 1.09v.006c.225 0 .406.044.558.127.666.382.955 1.835.73 3.704-.054.46-.142.945-.25 1.44-.96-.236-2.006-.417-3.107-.534-.66-.905-1.345-1.727-2.035-2.447 1.592-1.48 3.087-2.292 4.105-2.295zm-9.77.02c1.012 0 2.514.808 4.11 2.28-.686.72-1.37 1.537-2.02 2.442-1.107.117-2.154.298-3.113.538-.112-.49-.195-.964-.254-1.42-.23-1.868.054-3.32.714-3.707.19-.09.4-.127.563-.132zm4.882 3.05c.455.468.91.992 1.36 1.564-.44-.02-.89-.034-1.345-.034-.46 0-.915.01-1.36.034.44-.572.895-1.096 1.345-1.565zM12 8.1c.74 0 1.477.034 2.202.093.406.582.802 1.203 1.183 1.86.372.64.71 1.29 1.018 1.946-.308.655-.646 1.31-1.013 1.95-.38.66-.773 1.288-1.18 1.87-.728.063-1.466.098-2.21.098-.74 0-1.477-.035-2.202-.093-.406-.582-.802-1.204-1.183-1.86-.372-.64-.71-1.29-1.018-1.946.303-.657.646-1.313 1.013-1.954.38-.66.773-1.286 1.18-1.868.728-.064 1.466-.098 2.21-.098zm-3.635.254c-.24.377-.48.763-.704 1.16-.225.39-.435.782-.635 1.174-.265-.656-.49-1.31-.676-1.947.64-.15 1.315-.283 2.015-.386zm7.26 0c.695.103 1.365.23 2.006.387-.18.632-.405 1.282-.66 1.933-.2-.39-.41-.783-.64-1.174-.225-.392-.465-.774-.705-1.146zm3.063.675c.484.15.944.317 1.375.498 1.732.74 2.852 1.708 2.852 2.476-.005.768-1.125 1.74-2.857 2.475-.42.18-.88.342-1.355.493-.28-.958-.646-1.956-1.1-2.98.45-1.017.81-2.01 1.085-2.964zm-13.395.004c.278.96.645 1.957 1.1 2.98-.45 1.017-.812 2.01-1.086 2.964-.484-.15-.944-.318-1.37-.5-1.732-.737-2.852-1.706-2.852-2.474 0-.768 1.12-1.742 2.852-2.476.42-.18.88-.342 1.356-.494zm11.678 4.28c.265.657.49 1.312.676 1.948-.64.157-1.316.29-2.016.39.24-.375.48-.762.705-1.158.225-.39.435-.788.636-1.18zm-9.945.02c.2.392.41.783.64 1.175.23.39.465.772.705 1.143-.695-.102-1.365-.23-2.006-.386.18-.63.406-1.282.66-1.933zM17.92 16.32c.112.493.2.968.254 1.423.23 1.868-.054 3.32-.714 3.708-.147.09-.338.128-.563.128-1.012 0-2.514-.807-4.11-2.28.686-.72 1.37-1.536 2.02-2.44 1.107-.118 2.154-.3 3.113-.54zm-11.83.01c.96.234 2.006.415 3.107.532.66.905 1.345 1.727 2.035 2.446-1.595 1.483-3.092 2.295-4.11 2.295-.22-.005-.406-.05-.553-.132-.666-.38-.955-1.834-.73-3.703.054-.46.142-.944.25-1.438zm4.56.64c.44.02.89.034 1.345.034.46 0 .915-.01 1.36-.034-.44.572-.895 1.095-1.345 1.565-.455-.47-.91-.993-1.36-1.565z"/>
+                            </svg>
+                        </div>
+                        <div class="orbit-item" data-tech="aws">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M18.75,11.35A4.31,4.31 0 0,0 15.75,7.5C15.75,6.1 15.1,4.85 14.05,4.05C13.45,4.5 13.15,5.15 13.15,5.85A2.5,2.5 0 0,0 15.65,8.35A2.5,2.5 0 0,0 18.15,5.85C18.15,5.15 17.85,4.5 17.25,4.05C16.2,4.85 15.55,6.1 15.55,7.5A4.31,4.31 0 0,0 12.55,11.35A4.31,4.31 0 0,0 9.55,7.5C9.55,6.1 8.9,4.85 7.85,4.05C7.25,4.5 6.95,5.15 6.95,5.85A2.5,2.5 0 0,0 9.45,8.35A2.5,2.5 0 0,0 11.95,5.85C11.95,5.15 11.65,4.5 11.05,4.05C10,4.85 9.35,6.1 9.35,7.5A4.31,4.31 0 0,0 6.35,11.35A4.31,4.31 0 0,0 3.35,7.5C3.35,6.1 2.7,4.85 1.65,4.05C1.05,4.5 0.75,5.15 0.75,5.85A2.5,2.5 0 0,0 3.25,8.35A2.5,2.5 0 0,0 5.75,5.85C5.75,5.15 5.45,4.5 4.85,4.05C3.8,4.85 3.15,6.1 3.15,7.5A4.31,4.31 0 0,0 0.15,11.35V12.65A4.31,4.31 0 0,0 3.15,16.5C3.15,17.9 3.8,19.15 4.85,19.95C5.45,19.5 5.75,18.85 5.75,18.15A2.5,2.5 0 0,0 3.25,15.65A2.5,2.5 0 0,0 0.75,18.15C0.75,18.85 1.05,19.5 1.65,19.95C2.7,19.15 3.35,17.9 3.35,16.5A4.31,4.31 0 0,0 6.35,12.65A4.31,4.31 0 0,0 9.35,16.5C9.35,17.9 10,19.15 11.05,19.95C11.65,19.5 11.95,18.85 11.95,18.15A2.5,2.5 0 0,0 9.45,15.65A2.5,2.5 0 0,0 6.95,18.15C6.95,18.85 7.25,19.5 7.85,19.95C8.9,19.15 9.55,17.9 9.55,16.5A4.31,4.31 0 0,0 12.55,12.65A4.31,4.31 0 0,0 15.55,16.5C15.55,17.9 16.2,19.15 17.25,19.95C17.85,19.5 18.15,18.85 18.15,18.15A2.5,2.5 0 0,0 15.65,15.65A2.5,2.5 0 0,0 13.15,18.15C13.15,18.85 13.45,19.5 14.05,19.95C15.1,19.15 15.75,17.9 15.75,16.5A4.31,4.31 0 0,0 18.75,12.65V11.35Z"/>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">What I do best</span>
+                <h2 class="section-title">Skills & Technologies</h2>
+            </div>
+            <div class="skills-container">
+                <div class="skills-3d-scene">
+                    <canvas id="skills3D" class="skills-canvas"></canvas>
+                    <div class="skill-labels">
+                        <div class="skill-label" data-skill="backend" style="--x: 20%; --y: 30%;">
+                            <span>Backend</span>
+                        </div>
+                        <div class="skill-label" data-skill="frontend" style="--x: 70%; --y: 25%;">
+                            <span>Frontend</span>
+                        </div>
+                        <div class="skill-label" data-skill="cloud" style="--x: 50%; --y: 60%;">
+                            <span>Cloud</span>
+                        </div>
+                        <div class="skill-label" data-skill="mobile" style="--x: 25%; --y: 70%;">
+                            <span>Mobile</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="skills-grid">
+                    <div class="skill-category" data-category="backend">
+                        <div class="category-icon">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M22.7 19L13.6 9.9C14.5 7.6 14 4.9 12.1 3C10.1 1 7.1 0.6 4.7 1.7L9 6L6 9L1.6 4.7C0.4 7.1 0.9 10.1 2.9 12.1C4.8 14 7.5 14.5 9.8 13.6L18.9 22.7C19.3 23.1 19.9 23.1 20.3 22.7L22.6 20.4C23.1 20 23.1 19.3 22.7 19Z"/>
+                            </svg>
+                        </div>
+                        <h3>Backend Development</h3>
+                        <div class="skill-items">
+                            <div class="skill-item" data-level="95">
+                                <div class="skill-info">
+                                    <span class="skill-name">Java</span>
+                                    <span class="skill-percentage">95%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="95"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item" data-level="90">
+                                <div class="skill-info">
+                                    <span class="skill-name">Node.js</span>
+                                    <span class="skill-percentage">90%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="90"></div>
+                                </div>
+                            </div>
+                           
+                        </div>
+                    </div>
+
+                    <div class="skill-category" data-category="frontend">
+                        <div class="category-icon">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M12,4A8,8 0 0,1 20,12A8,8 0 0,1 12,20A8,8 0 0,1 4,12A8,8 0 0,1 12,4M16.5,8.5C17.3,8.5 18,9.2 18,10A1.5,1.5 0 0,1 16.5,11.5A1.5,1.5 0 0,1 15,10C15,9.2 15.7,8.5 16.5,8.5M10,9A1,1 0 0,1 11,10A1,1 0 0,1 10,11A1,1 0 0,1 9,10A1,1 0 0,1 10,9M7.5,12C8.3,12 9,12.7 9,13.5A1.5,1.5 0 0,1 7.5,15A1.5,1.5 0 0,1 6,13.5C6,12.7 6.7,12 7.5,12M16.5,12C17.3,12 18,12.7 18,13.5A1.5,1.5 0 0,1 16.5,15A1.5,1.5 0 0,1 15,13.5C15,12.7 15.7,12 16.5,12Z"/>
+                            </svg>
+                        </div>
+                        <h3>Frontend Development</h3>
+                        <div class="skill-items">
+                            <div class="skill-item" data-level="88">
+                                <div class="skill-info">
+                                    <span class="skill-name">React.js</span>
+                                    <span class="skill-percentage">88%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="88"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item" data-level="85">
+                                <div class="skill-info">
+                                    <span class="skill-name">React Native</span>
+                                    <span class="skill-percentage">85%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="85"></div>
+                                </div>
+                            </div>
+                           
+                        </div>
+                    </div>
+
+                    <div class="skill-category" data-category="cloud">
+                        <div class="category-icon">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M6.5,20Q4.22,20 2.61,18.43Q1,16.85 1,14.58Q1,12.63 2.17,11.1Q3.35,9.57 5.25,9.15Q5.88,6.85 7.75,5.43Q9.63,4 12,4Q14.93,4 16.96,6.04Q19,8.07 19,11Q20.73,11.2 21.86,12.5Q23,13.78 23,15.5Q23,17.38 21.69,18.69Q20.38,20 18.5,20H6.5M6.5,18H18.5Q19.55,18 20.27,17.27Q21,16.55 21,15.5Q21,14.45 20.27,13.73Q19.55,13 18.5,13H17V11Q17,8.79 15.61,7.39Q14.21,6 12,6Q9.79,6 8.39,7.39Q7,8.79 7,11H6.5Q5.05,11 4.03,12.03Q3,13.05 3,14.5Q3,15.95 4.03,16.97Q5.05,18 6.5,18Z"/>
+                            </svg>
+                        </div>
+                        <h3>Cloud & DevOps</h3>
+                        <div class="skill-items">
+                            <div class="skill-item" data-level="82">
+                                <div class="skill-info">
+                                    <span class="skill-name">AWS</span>
+                                    <span class="skill-percentage">82%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="82"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item" data-level="78">
+                                <div class="skill-info">
+                                    <span class="skill-name">Docker</span>
+                                    <span class="skill-percentage">78%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="78"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="skill-category" data-category="soft">
+                        <div class="category-icon">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M21.33,12.91C21.42,14.46 20.71,15.95 19.44,16.86L20.21,18.35C20.44,18.8 20.47,19.33 20.27,19.8C20.08,20.27 19.69,20.64 19.21,20.8L18.42,21.05C18.25,21.11 18.06,21.14 17.88,21.14C17.37,21.14 16.89,20.91 16.56,20.5L14.44,18C13.55,17.85 12.71,17.47 12,16.9C11.5,17.05 11,17.13 10.5,17.13C9.62,17.13 8.74,16.86 8,16.34C7.47,16.5 6.93,16.57 6.38,16.56C5.59,16.56 4.81,16.41 4.08,16.11C2.65,15.47 1.7,14.07 1.65,12.5C1.6,10.92 2.39,9.5 3.8,8.81C4.04,8.67 4.3,8.56 4.57,8.5C5.1,7.75 5.89,7.2 6.8,7C7.81,6.74 8.87,6.78 9.86,7.11C10.07,6.95 10.31,6.83 10.57,6.74C11.38,6.26 12.35,6.2 13.2,6.6C13.39,6.69 13.57,6.81 13.74,6.95C13.78,6.94 13.82,6.93 13.87,6.93C14.93,6.45 16.2,6.68 17.04,7.5C17.12,7.58 17.2,7.66 17.27,7.75C17.66,7.69 18.06,7.7 18.44,7.8C19.46,8.05 20.29,8.81 20.68,9.8C21.08,10.78 20.95,11.89 20.33,12.91M12.5,11.41C13.03,11.41 13.5,11.61 13.85,12C14.2,12.35 14.4,12.82 14.4,13.35C14.4,13.88 14.2,14.35 13.85,14.7C13.5,15.05 13.03,15.25 12.5,15.25C11.97,15.25 11.5,15.05 11.15,14.7C10.8,14.35 10.6,13.88 10.6,13.35C10.6,12.82 10.8,12.35 11.15,12C11.5,11.61 11.97,11.41 12.5,11.41Z"/>
+                            </svg>
+                        </div>
+                        <h3>Core Competencies</h3>
+                        <div class="skill-items">
+                            <div class="skill-item" data-level="95">
+                                <div class="skill-info">
+                                    <span class="skill-name">Problem Solving</span>
+                                    <span class="skill-percentage">95%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="95"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item" data-level="92">
+                                <div class="skill-info">
+                                    <span class="skill-name">Team Leadership</span>
+                                    <span class="skill-percentage">92%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="92"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item" data-level="88">
+                                <div class="skill-info">
+                                    <span class="skill-name">Communication</span>
+                                    <span class="skill-percentage">88%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="88"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="experience">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">My professional journey</span>
+                <h2 class="section-title">Work Experience</h2>
+            </div>
+            <div class="timeline-container">
+                <div class="timeline">
+                    <div class="timeline-item" data-aos="fade-up">
+                        <div class="timeline-marker">
+                            <div class="marker-glow"></div>
+                        </div>
+                        <div class="timeline-content">
+                            <div class="timeline-badge">Current</div>
+                            <div class="timeline-header">
+                                <h3>Senior Backend Developer</h3>
+                                <div class="company-info">
+                                    <span class="company">Tavan Bogd NBFI, Mongolia</span>
+                                    <span class="duration">01/2025 - Current</span>
+                                </div>
+                            </div>
+                            <ul class="timeline-achievements">
+                                <li>Conducted code reviews and provided technical guidance to ensure code quality and system standards</li>
+                                <li>Automated SME income calculation by developing middleware to extract and analyze tabular data from bank statement PDFs</li>
+                                <li>Developed a debt collection system for back-office employees to manage overdue loans</li>
+                            </ul>
+                            <div class="tech-stack">
+                                <span class="tech-tag">Java</span>
+                                <span class="tech-tag">Spring Boot</span>
+                                <span class="tech-tag">PDF Processing</span>
+                                <span class="tech-tag">Microservices</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item" data-aos="fade-up">
+                        <div class="timeline-marker">
+                            <div class="marker-glow"></div>
+                        </div>
+                        <div class="timeline-content">
+                            <div class="timeline-header">
+                                <h3>Backend Developer</h3>
+                                <div class="company-info">
+                                    <span class="company">Tavan Bogd NBFI, Mongolia</span>
+                                    <span class="duration">07/2023 - 01/2025</span>
+                                </div>
+                            </div>
+                            <ul class="timeline-achievements">
+                                <li>Integrated third-party banking services into payment gateway</li>
+                                <li>Developed document generation module for customer agreements and business documents</li>
+                            </ul>
+                            <div class="tech-stack">
+                                <span class="tech-tag">Node.js</span>
+                                <span class="tech-tag">Payment APIs</span>
+                                <span class="tech-tag">Document Generation</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item" data-aos="fade-up">
+                        <div class="timeline-marker">
+                            <div class="marker-glow"></div>
+                        </div>
+                        <div class="timeline-content">
+                            <div class="timeline-header">
+                                <h3>Frontend Developer</h3>
+                                <div class="company-info">
+                                    <span class="company">Tavan Bogd NBFI, Mongolia</span>
+                                    <span class="duration">02/2022 - 07/2023</span>
+                                </div>
+                            </div>
+                            <ul class="timeline-achievements">
+                                <li>Successfully launched PayOn.v2, a mobile loan application with 500,000 users</li>
+                                <li>Developed merchant web portal using React.js and Sass</li>
+                                <li>Implemented loyalty features and third-party service integrations</li>
+                            </ul>
+                            <div class="tech-stack">
+                                <span class="tech-tag">React Native</span>
+                                <span class="tech-tag">React.js</span>
+                                <span class="tech-tag">Sass</span>
+                                <span class="tech-tag">Mobile Development</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item" data-aos="fade-up">
+                        <div class="timeline-marker">
+                            <div class="marker-glow"></div>
+                        </div>
+                        <div class="timeline-content">
+                            <div class="timeline-header">
+                                <h3>Software Engineer Intern</h3>
+                                <div class="company-info">
+                                    <span class="company">AI Flexi, Paris, France</span>
+                                    <span class="duration">01/2021 - 01/2022</span>
+                                </div>
+                            </div>
+                            <ul class="timeline-achievements">
+                                <li>Developed FC Parcel, an Angular-based web platform connecting travelers and parcel senders</li>
+                                <li>Implemented "CyberGame" mobile application using Flutter for cybersecurity training</li>
+                            </ul>
+                            <div class="tech-stack">
+                                <span class="tech-tag">Angular</span>
+                                <span class="tech-tag">Flutter</span>
+                                <span class="tech-tag">Web Platform</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">My work</span>
+                <h2 class="section-title">Featured Projects</h2>
+            </div>
+            <div class="projects-grid">
+                <div class="project-card" data-project="payon">
+                    <div class="project-image">
+                        <canvas class="project-canvas" data-animation="mobile"></canvas>
+                        <div class="project-overlay">
+                            <div class="project-stats">
+                                <span class="stat">500K+ Users</span>
+                                <span class="stat">React Native</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-header">
+                            <h3>PayOn.v2 Mobile App</h3>
+                            <div class="project-icon">
+                                <svg viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M17,19H7V5H17M17,1H7C5.89,1 5,1.89 5,3V21C5,22.11 5.89,23 7,23H17C18.11,23 19,22.11 19,21V3C19,1.89 18.11,1 17,1Z"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <p>A comprehensive mobile loan application serving 500,000+ users with React Native, featuring loyalty systems and third-party integrations.</p>
+                        <div class="project-tags">
+                            <span class="tag">React Native</span>
+                            <span class="tag">Payment Gateway</span>
+                            <span class="tag">Fintech</span>
+                        </div>
+                        <div class="project-impact">
+                            <span class="impact-label">Impact:</span>
+                            <span class="impact-value">500,000+ Active Users</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card" data-project="fcparcel">
+                    <div class="project-image">
+                        <canvas class="project-canvas" data-animation="web"></canvas>
+                        <div class="project-overlay">
+                            <div class="project-stats">
+                                <span class="stat">Angular</span>
+                                <span class="stat">Web Platform</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-header">
+                            <h3>FC Parcel Platform</h3>
+                            <div class="project-icon">
+                                <svg viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M12,2A10,10 0 0,1 22,12A10,10 0 0,1 12,22A10,10 0 0,1 2,12A10,10 0 0,1 12,2M12,4A8,8 0 0,0 4,12A8,8 0 0,0 12,20A8,8 0 0,0 20,12A8,8 0 0,0 12,4M11,16.5L6.5,12L7.91,10.59L11,13.67L16.59,8.09L18,9.5L11,16.5Z"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <p>Angular-based web platform connecting travelers and parcel senders, featuring payment processing and tracking systems.</p>
+                        <div class="project-tags">
+                            <span class="tag">Angular</span>
+                            <span class="tag">Web Platform</span>
+                            <span class="tag">Logistics</span>
+                        </div>
+                        <div class="project-impact">
+                            <span class="impact-label">Type:</span>
+                            <span class="impact-value">Thesis Project</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card" data-project="cybersecurity">
+                    <div class="project-image">
+                        <canvas class="project-canvas" data-animation="security"></canvas>
+                        <div class="project-overlay">
+                            <div class="project-stats">
+                                <span class="stat">Flutter</span>
+                                <span class="stat">Security</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-header">
+                            <h3>CyberGame Security App</h3>
+                            <div class="project-icon">
+                                <svg viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M12,1L3,5V11C3,16.55 6.84,21.74 12,23C17.16,21.74 21,16.55 21,11V5L12,1M12,7C13.4,7 14.8,8.6 14.8,10V11C15.4,11 16,11.4 16,12V16C16,16.6 15.6,17 15,17H9C8.4,17 8,16.6 8,16V12C8,11.4 8.4,11 9,11V10C9,8.6 10.6,7 12,7M12,8.2C11.2,8.2 10.2,9.2 10.2,10V11H13.8V10C13.8,9.2 12.8,8.2 12,8.2Z"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <p>Flutter-based mobile application for cybersecurity training, helping users recognize and avoid email-related risks.</p>
+                        <div class="project-tags">
+                            <span class="tag">Flutter</span>
+                            <span class="tag">Cybersecurity</span>
+                            <span class="tag">Education</span>
+                        </div>
+                        <div class="project-impact">
+                            <span class="impact-label">Focus:</span>
+                            <span class="impact-value">Security Training</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Awards Section -->
+    <section id="awards" class="awards">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Recognition</span>
+                <h2 class="section-title">Awards & Achievements</h2>
+            </div>
+            <div class="awards-grid">
+                <div class="award-card">
+                    <div class="award-visual">
+                        <div class="award-icon">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12,2L13.09,8.26L22,9L13.09,9.74L12,16L10.91,9.74L2,9L10.91,8.26L12,2M12,4.5L11.5,7.5L8.5,8L11.5,8.5L12,11.5L12.5,8.5L15.5,8L12.5,7.5L12,4.5Z"/>
+                            </svg>
+                        </div>
+                        <div class="award-glow"></div>
+                    </div>
+                    <div class="award-content">
+                        <h3>TBG Hackathon 2023</h3>
+                        <div class="award-position">🥇 First Place Winner</div>
+                        <p class="award-description">
+                            Led a winning team to first place at Mongolia's largest corporate hackathon, 
+                            conceptualizing and prototyping an innovative career platform that revolutionizes 
+                            talent acquisition and employee engagement for enterprise organizations.
+                        </p>
+                        <div class="award-details">
+                            <span class="award-date">July 2023</span>
+                            <span class="award-category">Innovation & Leadership</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="award-card">
+                    <div class="award-visual">
+                        <div class="award-icon">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M7.97,16L5,19C4.67,19.3 4.23,19.5 3.75,19.5A1.75,1.75 0 0,1 2,17.75V17.5L3,10.12C3.21,7.81 5.14,6 7.5,6H16.5C18.86,6 20.79,7.81 21,10.12L22,17.5V17.75A1.75,1.75 0 0,1 20.25,19.5C19.77,19.5 19.33,19.3 19,19L16.03,16H7.97M7.5,8A0.5,0.5 0 0,0 7,8.5A0.5,0.5 0 0,0 7.5,9A0.5,0.5 0 0,0 8,8.5A0.5,0.5 0 0,0 7.5,8M16.5,8A0.5,0.5 0 0,0 16,8.5A0.5,0.5 0 0,0 16.5,9A0.5,0.5 0 0,0 17,8.5A0.5,0.5 0 0,0 16.5,8M6,10.5V12H4.5V13.5H6V15H7.5V13.5H9V12H7.5V10.5H6M16.5,10.5A1,1 0 0,0 15.5,11.5A1,1 0 0,0 16.5,12.5A1,1 0 0,0 17.5,11.5A1,1 0 0,0 16.5,10.5M19,13.5A1,1 0 0,0 18,14.5A1,1 0 0,0 19,15.5A1,1 0 0,0 20,14.5A1,1 0 0,0 19,13.5Z"/>
+                            </svg>
+                        </div>
+                        <div class="award-glow"></div>
+                    </div>
+                    <div class="award-content">
+                        <h3>Game Accelerator 2016</h3>
+                        <div class="award-position">3rd Place</div>
+                        <p class="award-description">
+                            Developed a 3D hide-and-seek game with Unity3d at Mongolian Science Park, 
+                            placing 3rd in the contest.
+                        </p>
+                        <div class="award-details">
+                            <span class="award-date">September 2016</span>
+                            <span class="award-category">Game Development</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Let's connect</span>
+                <h2 class="section-title">Get In Touch</h2>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-card">
+                        <h3>Ready to collaborate?</h3>
+                        <p>I'm always interested in new opportunities and exciting projects. Let's discuss how we can work together to create something amazing!</p>
+                        
+                        <div class="contact-details">
+                            <div class="contact-item">
+                                <div class="contact-icon">
+                                    <svg viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M20,8L12,13L4,8V6L12,11L20,6M20,4H4C2.89,4 2,4.89 2,6V18A2,2 0 0,0 4,20H20A2,2 0 0,0 22,18V6C22,4.89 21.1,4 20,4Z"/>
+                                    </svg>
+                                    <div class="icon-glow"></div>
+                                </div>
+                                <div class="contact-text">
+                                    <span class="contact-label">Email</span>
+                                    <span class="contact-value">tesoro.ec@gmail.com</span>
+                                </div>
+                            </div>
+                            
+                          
+                            
+                            <div class="contact-item">
+                                <div class="contact-icon">
+                                    <svg viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M10,2H14A2,2 0 0,1 16,4V6H20A2,2 0 0,1 22,8V19A2,2 0 0,1 20,21H4C2.89,21 2,20.1 2,19V8C2,6.89 2.89,6 4,6H8V4C8,2.89 8.89,2 10,2M14,6V4H10V6H14Z"/>
+                                    </svg>
+                                    <div class="icon-glow"></div>
+                                </div>
+                                <div class="contact-text">
+                                    <span class="contact-label">Status</span>
+                                    <span class="contact-value">Available for opportunities</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-cta">
+                            <a href="mailto:tesoro.ec@gmail.com" class="btn btn-primary">
+                                <span>Send Message</span>
+                                <div class="btn-glow"></div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-visual">
+                    <div class="contact-3d-scene">
+                        <canvas id="contact3D" class="contact-canvas"></canvas>
+                    </div>
+                    <div class="contact-particles">
+                        <div class="particle"></div>
+                        <div class="particle"></div>
+                        <div class="particle"></div>
+                        <div class="particle"></div>
+                        <div class="particle"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-text">
+                    <p>&copy; 2025 Erdene. Crafted with passion and precision.</p>
+                </div>
+                <div class="footer-links">
+                    <a href="#home">Back to Top</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
