@@ -16,6 +16,14 @@
     --blue-soft: rgba(13, 51, 201, 0.08);
     --amber: #A85F0A;
 
+    /* Stack categories: soft tints with a matching dark text colour.
+       Quiet enough that the pit reads as one set; the hue just hints
+       at which family a tool belongs to. */
+    --cat-backend-bg: #E3EEE8;   --cat-backend-fg: #1F4A3A;
+    --cat-fintech-bg: #E4EAFA;   --cat-fintech-fg: #1E3A9C;
+    --cat-frontend-bg: #EDE6F5;  --cat-frontend-fg: #4A2E73;
+    --cat-infra-bg: #F5EBE0;     --cat-infra-fg: #6B4520;
+
     --font: "Instrument Sans", "Helvetica Neue", Arial, sans-serif;
     --mono: ui-monospace, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
 
@@ -106,11 +114,34 @@ button { font: inherit; color: inherit; }
 .brand {
     position: relative;
     z-index: 2;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.55rem;
     font-size: 0.95rem;
     font-weight: 500;
     letter-spacing: -0.01em;
     text-decoration: none;
 }
+
+.brand-mark {
+    display: block;
+    width: 1.5rem;
+    height: 1.5rem;
+    flex: none;
+}
+
+.brand-mark .mark-tile {
+    fill: var(--ink);
+    transition: fill 0.25s;
+}
+
+.brand-mark .mark-letters { fill: var(--paper); }
+
+/* The name reads as part of the lockup, so it tracks a shade tighter
+   than the nav beside it. */
+.brand-word { letter-spacing: -0.015em; }
+
+.brand:hover .mark-tile { fill: var(--blue); }
 
 .site-nav {
     display: flex;
@@ -616,7 +647,7 @@ button { font: inherit; color: inherit; }
     height: 2.5rem;
     padding: 0 1rem;
     border-radius: 999px;
-    border: 1px solid var(--ink);
+    border: 1px solid transparent;
     background: var(--white);
     color: var(--ink);
     font-size: 1rem;
@@ -630,13 +661,14 @@ button { font: inherit; color: inherit; }
     transition: opacity 0.35s, box-shadow 0.2s;
 }
 
-.chip[data-cat="backend"] { background: var(--ink); border-color: var(--ink); color: var(--paper); }
-.chip[data-cat="fintech"] { background: var(--blue); border-color: var(--blue); color: #fff; }
-.chip[data-cat="infra"] { background: var(--hair-2); border-color: var(--hair-2); }
+.chip[data-cat="backend"] { background: var(--cat-backend-bg); color: var(--cat-backend-fg); }
+.chip[data-cat="fintech"] { background: var(--cat-fintech-bg); color: var(--cat-fintech-fg); }
+.chip[data-cat="frontend"] { background: var(--cat-frontend-bg); color: var(--cat-frontend-fg); }
+.chip[data-cat="infra"] { background: var(--cat-infra-bg); color: var(--cat-infra-fg); }
 
 .chip.is-held {
     cursor: grabbing;
-    box-shadow: 0 10px 24px rgba(21, 24, 29, 0.18);
+    box-shadow: 0 10px 24px rgba(21, 24, 29, 0.14);
     z-index: 2;
 }
 

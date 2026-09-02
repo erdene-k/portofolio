@@ -6,6 +6,8 @@
     <title>Erdene K — Senior Backend Developer</title>
     <meta name="description" content="Erdene K is a senior backend developer in fintech: payment gateways, loan platforms, and the quiet infrastructure behind them. Based in Ulaanbaatar, Mongolia.">
     <meta name="theme-color" content="#F4F5F7">
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wdth,wght@0,75..100,400..700;1,75..100,400..700&display=swap" rel="stylesheet">
@@ -15,7 +17,13 @@
     <a class="skip" href="#main">Skip to content</a>
 
     <header class="site-header" id="siteHeader">
-        <a href="#top" class="brand">Erdene K</a>
+        <a href="#top" class="brand" aria-label="Erdene K — back to top">
+            <svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true" focusable="false">
+                <rect class="mark-tile" width="32" height="32" rx="7.5"/>
+                <path class="mark-letters" d="M5 22.44V9.56H7.33V22.44ZM6.11 22.44V20.6H14.27V22.44ZM6.11 16.72V14.91H13.64V16.72ZM6.11 11.4V9.56H14.07V11.4ZM15.73 22.44V9.56H18.06V22.44ZM17.41 15.75 23.51 9.56H26.64L20.29 15.75ZM23.8 22.44 17.38 15.75H20.29L27 22.44Z"/>
+            </svg>
+            <span class="brand-word">Erdene K</span>
+        </a>
         <nav class="site-nav" id="siteNav" aria-label="Primary">
             <a href="#about" data-section="about">Profile</a>
             <a href="#stack" data-section="stack">Stack</a>
