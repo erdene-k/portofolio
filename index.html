@@ -4,375 +4,339 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Erdene K — Senior Backend Developer</title>
-    <meta name="description" content="Erdene K — Senior Backend Developer specializing in fintech, payment systems, and scalable backend architecture. Based in Ulaanbaatar, Mongolia.">
+    <meta name="description" content="Erdene K is a senior backend developer in fintech: payment gateways, loan platforms, and the quiet infrastructure behind them. Based in Ulaanbaatar, Mongolia.">
+    <meta name="theme-color" content="#F4F5F7">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@300;400;500;600;700&family=Saira:wght@300;400;500&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wdth,wght@0,75..100,400..700;1,75..100,400..700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="scanlines" aria-hidden="true"></div>
-    <div class="grain" aria-hidden="true"></div>
+    <a class="skip" href="#main">Skip to content</a>
 
-    <!-- Header -->
-    <header class="site-header">
-        <a href="#top" class="brand">
-            <span class="brand-mark">[E·K]</span>
-            <span class="brand-name">ERDENE.K</span>
-        </a>
+    <header class="site-header" id="siteHeader">
+        <a href="#top" class="brand">Erdene K</a>
         <nav class="site-nav" id="siteNav" aria-label="Primary">
-            <a href="#about" class="nav-link" data-section="about"><span class="nav-num">01</span>Profile</a>
-            <a href="#stack" class="nav-link" data-section="stack"><span class="nav-num">02</span>Stack</a>
-            <a href="#experience" class="nav-link" data-section="experience"><span class="nav-num">03</span>Experience</a>
-            <a href="#work" class="nav-link" data-section="work"><span class="nav-num">04</span>Work</a>
-            <a href="#contact" class="nav-link nav-link-cta" data-section="contact">Contact ↗</a>
+            <a href="#about" data-section="about">Profile</a>
+            <a href="#stack" data-section="stack">Stack</a>
+            <a href="#experience" data-section="experience">Experience</a>
+            <a href="#work" data-section="work">Work</a>
+            <a href="#contact" data-section="contact">Contact</a>
         </nav>
-        <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
-            <span></span><span></span>
-        </button>
+        <button class="nav-toggle" id="navToggle" type="button" aria-expanded="false" aria-controls="siteNav">Menu</button>
     </header>
 
-    <main id="top">
+    <main id="main">
         <!-- Hero -->
-        <section class="hero" id="home">
-            <div class="hero-inner">
-                <p class="hero-kicker reveal-load" style="--d: 0">
-                    <span class="status-dot" aria-hidden="true"></span>
-                    Senior backend developer — open to new opportunities
+        <section class="hero" id="top">
+            <div class="hero-copy">
+                <p class="hero-status"><span class="dot" aria-hidden="true"></span>Senior backend developer, open to new roles</p>
+                <h1 class="hero-title">The systems behind the money.</h1>
+                <p class="hero-sub">
+                    I build payment gateways, loan platforms, and the quiet infrastructure
+                    that half a million people use without noticing.
                 </p>
-                <h1 class="hero-title">
-                    <span class="hero-line reveal-load" style="--d: 1">Building the systems</span>
-                    <span class="hero-line reveal-load" style="--d: 2">behind the <em class="glitch" data-text="money">money</em><span class="cursor" aria-hidden="true">_</span></span>
-                </h1>
-                <p class="hero-sub reveal-load" style="--d: 3">
-                    I'm Erdene — a backend engineer in fintech. I design payment gateways,
-                    loan platforms, and the quiet infrastructure that half a million people
-                    rely on without ever noticing it.
-                </p>
-                <div class="hero-actions reveal-load" style="--d: 4">
-                    <a href="mailto:tesoro.ec@gmail.com" class="btn-hud">Initiate contact <span class="arrow">↗</span></a>
-                    <a href="#work" class="btn-hud btn-hud-ghost">View work <span class="arrow">↓</span></a>
+                <div class="hero-actions">
+                    <a class="button" href="mailto:tesoro.ec@gmail.com">Email me</a>
+                    <a class="link" href="#work">See selected work</a>
                 </div>
             </div>
 
-            <dl class="hero-ledger reveal-load" style="--d: 5">
-                <div class="ledger-cell">
-                    <dt>Location</dt>
-                    <dd>Ulaanbaatar, MN</dd>
+            <figure class="hero-figure">
+                <div class="seq" id="seq" role="img" aria-label="Sequence diagram of one payment moving from the customer app through the payment gateway and the bank to the ledger. Buttons below switch between a bank timeout with a retry, a customer double-tap handled by an idempotency key, and a payment where nothing goes wrong.">
+                    <noscript><p>A sequence diagram of a payment moving from the customer app, through the payment gateway and bank, to the ledger.</p></noscript>
                 </div>
-                <div class="ledger-cell">
-                    <dt>Experience</dt>
-                    <dd>4+ years</dd>
+                <figcaption class="seq-caption"><span id="seqCaption"></span></figcaption>
+                <div class="seq-controls">
+                    <span class="seq-what">What if</span>
+                    <button type="button" class="pill seq-scn is-active" data-scenario="quiet">the bank goes quiet</button>
+                    <button type="button" class="pill seq-scn" data-scenario="double">the customer double-taps</button>
+                    <button type="button" class="pill seq-scn" data-scenario="happy">nothing goes wrong</button>
+                    <button type="button" class="text-btn seq-replay" id="seqReplay">Replay</button>
                 </div>
-                <div class="ledger-cell">
-                    <dt>Users served</dt>
-                    <dd>500,000+</dd>
-                </div>
-                <div class="ledger-cell">
-                    <dt>Domain</dt>
-                    <dd>Fintech / Payments</dd>
-                </div>
-                <div class="ledger-cell">
-                    <dt>Local time</dt>
-                    <dd><span id="localTime">--:--</span> UTC+8</dd>
-                </div>
-            </dl>
+            </figure>
         </section>
 
-        <!-- Stack ticker -->
-        <div class="ticker" aria-hidden="true">
-            <div class="ticker-track" id="tickerTrack">
-                <span class="ticker-group">
-                    <span>Java</span><i>◆</i><span>Spring Boot</span><i>◆</i><span>Node.js</span><i>◆</i>
-                    <span>TypeScript</span><i>◆</i><span>React</span><i>◆</i><span>React Native</span><i>◆</i>
-                    <span>AWS</span><i>◆</i><span>Docker</span><i>◆</i><span>PostgreSQL</span><i>◆</i>
-                    <span>MongoDB</span><i>◆</i><span>Microservices</span><i>◆</i><span>Payment APIs</span><i>◆</i>
-                </span>
-            </div>
-        </div>
-
-        <!-- About -->
+        <!-- Profile -->
         <section class="section" id="about">
-            <header class="section-head reveal">
-                <span class="section-num">SYS.01</span>
-                <h2 class="section-title">Profile</h2>
-                <span class="section-rule" aria-hidden="true"></span>
-            </header>
-            <div class="about-grid">
-                <div class="about-copy reveal">
-                    <p class="lede">
-                        Most of my work is invisible — and that's the point. Good backend
-                        engineering means payments clear, loans disburse, and documents
-                        generate without anyone thinking about how.
-                    </p>
-                    <p>
-                        I started in frontend, shipping a mobile loan app to 500,000+ users,
-                        then moved deeper into the stack: payment gateway integrations,
-                        document generation systems, PDF data-extraction middleware for SME
-                        credit scoring, and a debt-collection platform. That full-stack path
-                        means I design APIs the way the people consuming them wish they were designed.
-                    </p>
-                    <p>
-                        Today I'm a Senior Backend Developer at Tavan Bogd NBFI, where I lead
-                        code reviews, set system standards, and build the services that keep
-                        a non-bank financial institution running.
-                    </p>
-                </div>
-                <div class="about-side reveal">
-                    <h3 class="side-label">Education</h3>
-                    <ul class="side-list">
-                        <li>
-                            <span class="side-period">2017–2022</span>
-                            <div>
-                                <strong>BSc, Computer Science Engineering</strong>
-                                <span>Budapest University of Technology and Economics, Hungary</span>
-                            </div>
-                        </li>
-                        <li>
-                            <span class="side-period">2012–2013</span>
-                            <div>
-                                <strong>AFS Intercultural Program</strong>
-                                <span>I.S.I.S. "Giulio Natta", Bergamo, Italy</span>
-                            </div>
-                        </li>
-                    </ul>
-                    <h3 class="side-label">Recognition</h3>
-                    <ul class="side-list">
-                        <li>
-                            <span class="side-period">2023</span>
-                            <div>
-                                <strong>TBG Hackathon — 1st place</strong>
-                                <span>Led the winning team at Mongolia's largest corporate hackathon</span>
-                            </div>
-                        </li>
-                        <li>
-                            <span class="side-period">2016</span>
-                            <div>
-                                <strong>Game Accelerator — 3rd place</strong>
-                                <span>3D game built with Unity at Mongolian Science Park</span>
-                            </div>
-                        </li>
-                    </ul>
+            <h2 class="section-title">Profile</h2>
+            <div class="section-body">
+                <p class="lede">
+                    Most of my work is invisible, and that's the point. Payments clear,
+                    loans disburse, documents generate, and nobody has to think about how.
+                </p>
+                <p class="prose">
+                    I started in frontend, shipping a loan app to half a million people, then
+                    went deeper into the stack: payment gateways, document generation, PDF data
+                    extraction, debt collection. Today I'm a senior backend developer at
+                    Tavan Bogd NBFI, leading code reviews and setting the standards.
+                </p>
+
+                <ul class="stats">
+                    <li><strong><span data-count="500000">0</span>+</strong><span>people using code I shipped</span></li>
+                    <li><strong><span data-count="4">0</span>+</strong><span>years in fintech</span></li>
+                    <li><strong>1st</strong><span>place, TBG Hackathon 2023</span></li>
+                </ul>
+
+                <div class="facts">
+                    <div class="facts-group">
+                        <h3>Education</h3>
+                        <ul>
+                            <li><span class="dates">2017 – 2022</span><span>BSc Computer Science Engineering, BME Budapest</span></li>
+                            <li><span class="dates">2012 – 2013</span><span>AFS exchange year, Bergamo, Italy</span></li>
+                        </ul>
+                    </div>
+                    <div class="facts-group">
+                        <h3>Recognition</h3>
+                        <ul>
+                            <li><span class="dates">2023</span><span>1st place, TBG Hackathon, leading the winning team</span></li>
+                            <li><span class="dates">2016</span><span>3rd place, Game Accelerator, Mongolian Science Park</span></li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </section>
 
         <!-- Stack -->
         <section class="section" id="stack">
-            <header class="section-head reveal">
-                <span class="section-num">SYS.02</span>
-                <h2 class="section-title">Stack</h2>
-                <span class="section-rule" aria-hidden="true"></span>
-            </header>
-            <div class="stack-grid">
-                <div class="stack-col reveal">
-                    <h3>Backend</h3>
-                    <ul>
-                        <li>Java / Spring Boot</li>
-                        <li>Node.js / TypeScript</li>
-                        <li>REST &amp; Microservices</li>
-                        <li>PDF processing pipelines</li>
-                    </ul>
+            <h2 class="section-title">Stack</h2>
+            <div class="section-body">
+                <div class="stack-bar">
+                    <div class="stack-filters" role="group" aria-label="Filter tools">
+                        <button type="button" class="pill filter is-active" data-filter="all">All</button>
+                        <button type="button" class="pill filter" data-filter="backend">Backend</button>
+                        <button type="button" class="pill filter" data-filter="fintech">Fintech</button>
+                        <button type="button" class="pill filter" data-filter="frontend">Frontend and mobile</button>
+                        <button type="button" class="pill filter" data-filter="infra">Infrastructure</button>
+                    </div>
+                    <button type="button" class="text-btn stack-shake" id="stackShake">Shake</button>
                 </div>
-                <div class="stack-col reveal">
-                    <h3>Fintech</h3>
-                    <ul>
-                        <li>Payment gateway integration</li>
-                        <li>Banking service APIs</li>
-                        <li>Loan origination systems</li>
-                        <li>Document generation</li>
+                <div class="stack-pit" id="stackPit" data-filter="all">
+                    <ul class="chips">
+                        <li class="chip" data-cat="backend">Java</li>
+                        <li class="chip" data-cat="backend">Spring Boot</li>
+                        <li class="chip" data-cat="backend">Node.js</li>
+                        <li class="chip" data-cat="backend">TypeScript</li>
+                        <li class="chip" data-cat="backend">Microservices</li>
+                        <li class="chip" data-cat="backend">PDF processing</li>
+                        <li class="chip" data-cat="fintech">Payment gateways</li>
+                        <li class="chip" data-cat="fintech">Banking APIs</li>
+                        <li class="chip" data-cat="fintech">Loan origination</li>
+                        <li class="chip" data-cat="fintech">Document generation</li>
+                        <li class="chip" data-cat="frontend">React</li>
+                        <li class="chip" data-cat="frontend">React Native</li>
+                        <li class="chip" data-cat="frontend">Angular</li>
+                        <li class="chip" data-cat="frontend">Flutter</li>
+                        <li class="chip" data-cat="frontend">Sass</li>
+                        <li class="chip" data-cat="infra">AWS</li>
+                        <li class="chip" data-cat="infra">Docker</li>
+                        <li class="chip" data-cat="infra">PostgreSQL</li>
+                        <li class="chip" data-cat="infra">MongoDB</li>
+                        <li class="chip" data-cat="infra">CI/CD</li>
                     </ul>
-                </div>
-                <div class="stack-col reveal">
-                    <h3>Frontend &amp; Mobile</h3>
-                    <ul>
-                        <li>React / Sass</li>
-                        <li>React Native</li>
-                        <li>Angular</li>
-                        <li>Flutter</li>
-                    </ul>
-                </div>
-                <div class="stack-col reveal">
-                    <h3>Infrastructure</h3>
-                    <ul>
-                        <li>AWS</li>
-                        <li>Docker</li>
-                        <li>PostgreSQL / MongoDB</li>
-                        <li>CI/CD</li>
-                    </ul>
+                    <p class="pit-hint" aria-hidden="true">Drag them around</p>
                 </div>
             </div>
         </section>
 
         <!-- Experience -->
         <section class="section" id="experience">
-            <header class="section-head reveal">
-                <span class="section-num">SYS.03</span>
-                <h2 class="section-title">Experience</h2>
-                <span class="section-rule" aria-hidden="true"></span>
-            </header>
+            <h2 class="section-title">Experience</h2>
+            <div class="section-body">
+                <article class="employer">
+                    <header class="employer-head">
+                        <div>
+                            <h3>Tavan Bogd NBFI</h3>
+                            <p>Non-bank financial institution, Ulaanbaatar</p>
+                        </div>
+                        <span class="dates">2022 – present</span>
+                    </header>
+                    <ol class="roles">
+                        <li class="role">
+                            <div class="role-head">
+                                <h4>Senior backend developer</h4>
+                                <span class="dates">2025 – present</span>
+                            </div>
+                            <p>Lead code reviews and set the standards. Built the middleware that reads bank-statement PDFs for SME income checks, and a debt-collection system for the back office.</p>
+                            <p class="tools">Java, Spring Boot, PDF processing, microservices</p>
+                        </li>
+                        <li class="role">
+                            <div class="role-head">
+                                <h4>Backend developer</h4>
+                                <span class="dates">2023 – 2025</span>
+                            </div>
+                            <p>Plugged third-party banking services into the payment gateway and built the module that generates customer agreements.</p>
+                            <p class="tools">Node.js, payment APIs, document generation</p>
+                        </li>
+                        <li class="role">
+                            <div class="role-head">
+                                <h4>Frontend developer</h4>
+                                <span class="dates">2022 – 2023</span>
+                            </div>
+                            <p>Launched PayOn v2 to 500,000+ users and built the merchant web portal.</p>
+                            <p class="tools">React Native, React, Sass</p>
+                        </li>
+                    </ol>
+                </article>
 
-            <article class="xp-row reveal">
-                <div class="xp-meta">
-                    <span class="xp-period">2025 — now</span>
-                    <span class="xp-badge">Active</span>
-                </div>
-                <div class="xp-body">
-                    <h3>Senior Backend Developer <span class="xp-co">// Tavan Bogd NBFI</span></h3>
-                    <ul class="xp-points">
-                        <li>Lead code reviews and technical guidance, owning code quality and system standards across the team</li>
-                        <li>Automated SME income verification with middleware that extracts and analyzes tabular data from bank-statement PDFs</li>
-                        <li>Built a debt-collection system for back-office teams to manage overdue loans end to end</li>
-                    </ul>
-                    <p class="xp-tags">Java · Spring Boot · PDF processing · Microservices</p>
-                </div>
-            </article>
-
-            <article class="xp-row reveal">
-                <div class="xp-meta">
-                    <span class="xp-period">2023 — 2025</span>
-                </div>
-                <div class="xp-body">
-                    <h3>Backend Developer <span class="xp-co">// Tavan Bogd NBFI</span></h3>
-                    <ul class="xp-points">
-                        <li>Integrated third-party banking services into the company's payment gateway</li>
-                        <li>Developed the document-generation module for customer agreements and business documents</li>
-                    </ul>
-                    <p class="xp-tags">Node.js · Payment APIs · Document generation</p>
-                </div>
-            </article>
-
-            <article class="xp-row reveal">
-                <div class="xp-meta">
-                    <span class="xp-period">2022 — 2023</span>
-                </div>
-                <div class="xp-body">
-                    <h3>Frontend Developer <span class="xp-co">// Tavan Bogd NBFI</span></h3>
-                    <ul class="xp-points">
-                        <li>Launched PayOn v2, a mobile loan application now serving 500,000+ users</li>
-                        <li>Built the merchant web portal with React and Sass</li>
-                        <li>Shipped loyalty features and third-party service integrations</li>
-                    </ul>
-                    <p class="xp-tags">React Native · React · Sass</p>
-                </div>
-            </article>
-
-            <article class="xp-row reveal">
-                <div class="xp-meta">
-                    <span class="xp-period">2021 — 2022</span>
-                </div>
-                <div class="xp-body">
-                    <h3>Software Engineer Intern <span class="xp-co">// AI Flexi, Paris</span></h3>
-                    <ul class="xp-points">
-                        <li>Developed FC Parcel, an Angular web platform connecting travelers and parcel senders</li>
-                        <li>Implemented CyberGame, a Flutter app for cybersecurity awareness training</li>
-                    </ul>
-                    <p class="xp-tags">Angular · Flutter</p>
-                </div>
-            </article>
+                <article class="employer">
+                    <header class="employer-head">
+                        <div>
+                            <h3>AI Flexi</h3>
+                            <p>Paris</p>
+                        </div>
+                        <span class="dates">2021 – 2022</span>
+                    </header>
+                    <ol class="roles">
+                        <li class="role">
+                            <div class="role-head">
+                                <h4>Software engineer intern</h4>
+                            </div>
+                            <p>Built FC Parcel in Angular and CyberGame in Flutter.</p>
+                            <p class="tools">Angular, Flutter</p>
+                        </li>
+                    </ol>
+                </article>
+            </div>
         </section>
 
         <!-- Work -->
         <section class="section" id="work">
-            <header class="section-head reveal">
-                <span class="section-num">SYS.04</span>
-                <h2 class="section-title">Selected work</h2>
-                <span class="section-rule" aria-hidden="true"></span>
-            </header>
-            <div class="work-list">
-                <article class="work-item reveal">
-                    <span class="work-index">001</span>
-                    <div class="work-main">
+            <h2 class="section-title">Selected work</h2>
+            <div class="section-body work-list">
+
+                <article class="work">
+                    <div class="work-text">
                         <h3>PayOn v2</h3>
-                        <p>
-                            Mobile loan application for a non-bank financial institution —
-                            loyalty systems, third-party integrations, and a lending flow
-                            trusted by half a million people.
-                        </p>
-                        <p class="work-tags">React Native · Payment gateway · Fintech</p>
+                        <p>A mobile loan app for a non-bank lender, with loyalty features and third-party integrations. Half a million people use it.</p>
+                        <p class="work-meta">React Native, payment gateway, fintech</p>
                     </div>
-                    <div class="work-stat">
-                        <strong>500K+</strong>
-                        <span>active users</span>
-                    </div>
+                    <figure class="fig fig-payon">
+                        <svg viewBox="0 0 200 140" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+                            <rect x="73" y="5" width="54" height="130" rx="10"/>
+                            <line class="f-hair" x1="94" y1="13" x2="106" y2="13"/>
+                            <g class="f-hair" stroke-width="3">
+                                <line x1="86" y1="40" x2="114" y2="40"/>
+                                <line x1="86" y1="50" x2="104" y2="50"/>
+                                <line x1="86" y1="60" x2="110" y2="60"/>
+                            </g>
+                            <g stroke-width="4">
+                                <line x1="86" y1="80" x2="96" y2="80"/>
+                                <line x1="101" y1="80" x2="114" y2="80"/>
+                            </g>
+                            <rect class="payon-btn" x="86" y="102" width="28" height="14" rx="4"/>
+                            <path class="payon-check" d="M93 109 l4 4 l9 -9"/>
+                            <rect class="payon-toast" x="82" y="20" width="36" height="9" rx="4.5" fill="var(--blue)" stroke="none"/>
+                        </svg>
+                        <figcaption>500,000+ active users</figcaption>
+                    </figure>
                 </article>
 
-                <article class="work-item reveal">
-                    <span class="work-index">002</span>
-                    <div class="work-main">
+                <article class="work">
+                    <div class="work-text">
                         <h3>Bank-statement intelligence</h3>
-                        <p>
-                            Middleware that parses tabular data out of bank-statement PDFs to
-                            automate SME income calculation — turning a manual underwriting
-                            step into a service call.
-                        </p>
-                        <p class="work-tags">Java · PDF extraction · Credit scoring</p>
+                        <p>Reads bank-statement PDFs and works out SME income automatically, turning a manual underwriting step into an API call.</p>
+                        <p class="work-meta">Java, PDF extraction, credit scoring</p>
                     </div>
-                    <div class="work-stat">
-                        <strong>Automated</strong>
-                        <span>SME underwriting</span>
-                    </div>
+                    <figure class="fig fig-statement">
+                        <svg viewBox="0 0 200 140" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+                            <defs>
+                                <linearGradient id="scanGrad" x1="0" y1="0" x2="0" y2="1">
+                                    <stop offset="0" style="stop-color: var(--blue); stop-opacity: 0"/>
+                                    <stop offset="1" style="stop-color: var(--blue); stop-opacity: .16"/>
+                                </linearGradient>
+                            </defs>
+                            <rect x="40" y="6" width="120" height="128" rx="3"/>
+                            <line x1="52" y1="20" x2="92" y2="20" stroke-width="3"/>
+                            <g class="f-hair" stroke-width="3">
+                                <line x1="52" y1="38" x2="62" y2="38"/><line x1="70" y1="38" x2="110" y2="38"/><line class="st-amt" x1="128" y1="38" x2="148" y2="38"/>
+                                <line x1="52" y1="50" x2="62" y2="50"/><line x1="70" y1="50" x2="102" y2="50"/><line class="st-amt is-income" style="--d:.8s" x1="124" y1="50" x2="148" y2="50"/>
+                                <line x1="52" y1="62" x2="62" y2="62"/><line x1="70" y1="62" x2="112" y2="62"/><line class="st-amt" x1="132" y1="62" x2="148" y2="62"/>
+                                <line x1="52" y1="74" x2="62" y2="74"/><line x1="70" y1="74" x2="98" y2="74"/><line class="st-amt is-income" style="--d:1.3s" x1="120" y1="74" x2="148" y2="74"/>
+                                <line x1="52" y1="86" x2="62" y2="86"/><line x1="70" y1="86" x2="108" y2="86"/><line class="st-amt" x1="130" y1="86" x2="148" y2="86"/>
+                                <line x1="52" y1="98" x2="62" y2="98"/><line x1="70" y1="98" x2="104" y2="98"/><line class="st-amt is-income" style="--d:1.8s" x1="126" y1="98" x2="148" y2="98"/>
+                            </g>
+                            <line class="f-hair" x1="52" y1="110" x2="148" y2="110"/>
+                            <line class="st-total" x1="114" y1="121" x2="148" y2="121" stroke-width="4"/>
+                            <g class="st-scan">
+                                <rect x="44" y="12" width="112" height="14" fill="url(#scanGrad)" stroke="none"/>
+                                <line x1="44" y1="26" x2="156" y2="26" stroke="var(--blue)"/>
+                            </g>
+                        </svg>
+                        <figcaption>Income rows found, totalled, scored</figcaption>
+                    </figure>
                 </article>
 
-                <article class="work-item reveal">
-                    <span class="work-index">003</span>
-                    <div class="work-main">
+                <article class="work">
+                    <div class="work-text">
                         <h3>FC Parcel</h3>
-                        <p>
-                            Angular platform connecting travelers with parcel senders —
-                            payments, tracking, and matching, built end to end as a
-                            university thesis project in Paris.
-                        </p>
-                        <p class="work-tags">Angular · Logistics · Payments</p>
+                        <p>Matches travellers with people who need a parcel delivered. Payments, tracking, and matching, built as my thesis project in Paris.</p>
+                        <p class="work-meta">Angular, logistics, payments</p>
                     </div>
-                    <div class="work-stat">
-                        <strong>Thesis</strong>
-                        <span>BSc project</span>
-                    </div>
+                    <figure class="fig fig-parcel">
+                        <svg viewBox="0 0 200 140" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+                            <line class="f-hair" x1="16" y1="118" x2="184" y2="118"/>
+                            <circle cx="36" cy="100" r="7"/>
+                            <circle class="pc-dest" cx="164" cy="100" r="7"/>
+                            <path id="pc-route" class="pc-route" d="M36 100 C 66 24, 134 24, 164 100"/>
+                            <g class="pc-box">
+                                <rect x="-7" y="-7" width="14" height="14" rx="2.5" fill="var(--paper)" stroke="var(--blue)"/>
+                                <line x1="0" y1="-7" x2="0" y2="7" stroke="var(--blue)"/>
+                                <animateMotion data-delay="1.1" dur="1.6s" begin="indefinite" fill="freeze" calcMode="spline" keyTimes="0;1" keySplines="0.45 0 0.2 1" rotate="0">
+                                    <mpath href="#pc-route"/>
+                                </animateMotion>
+                            </g>
+                        </svg>
+                        <figcaption>A parcel matched with a traveller</figcaption>
+                    </figure>
                 </article>
 
-                <article class="work-item reveal">
-                    <span class="work-index">004</span>
-                    <div class="work-main">
+                <article class="work">
+                    <div class="work-text">
                         <h3>CyberGame</h3>
-                        <p>
-                            Flutter training app that teaches people to recognize phishing and
-                            email-borne risks through interactive scenarios.
-                        </p>
-                        <p class="work-tags">Flutter · Security · Education</p>
+                        <p>A Flutter game that teaches people to spot phishing before it spots them.</p>
+                        <p class="work-meta">Flutter, security, education</p>
                     </div>
-                    <div class="work-stat">
-                        <strong>Security</strong>
-                        <span>awareness training</span>
-                    </div>
+                    <figure class="fig fig-cyber">
+                        <svg viewBox="0 0 200 140" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+                            <g class="cg-hook">
+                                <path d="M118 -12 V 60 a 9 9 0 0 1 -18 0 v -7"/>
+                                <path d="M100 53 l -5 4"/>
+                            </g>
+                            <rect x="50" y="46" width="100" height="66" rx="3"/>
+                            <path d="M50 48 L100 84 L150 48"/>
+                            <g class="cg-badge">
+                                <circle cx="150" cy="112" r="13" fill="var(--blue)" stroke="none"/>
+                                <path d="M144 112 l4 4 l8 -8" stroke="#fff"/>
+                            </g>
+                        </svg>
+                        <figcaption>A phishing email, caught</figcaption>
+                    </figure>
                 </article>
+
             </div>
         </section>
 
         <!-- Contact -->
         <section class="section contact" id="contact">
-            <header class="section-head reveal">
-                <span class="section-num">SYS.05</span>
-                <h2 class="section-title">Contact</h2>
-                <span class="section-rule" aria-hidden="true"></span>
-            </header>
-            <div class="contact-inner reveal">
-                <p class="contact-lede">Have a system that needs building<br><em>— or fixing?</em></p>
-                <a class="contact-mail" href="mailto:tesoro.ec@gmail.com">
-                    tesoro.ec@gmail.com <span class="arrow">↗</span>
-                </a>
+            <h2 class="section-title">Contact</h2>
+            <div class="section-body">
+                <p class="contact-lede">Have a system that needs building, or fixing?</p>
+                <div class="contact-row">
+                    <a class="contact-mail" href="mailto:tesoro.ec@gmail.com">tesoro.ec@gmail.com</a>
+                    <button type="button" class="copy" id="copyMail" data-copy="tesoro.ec@gmail.com">Copy</button>
+                </div>
                 <p class="contact-note">
-                    <span class="status-dot" aria-hidden="true"></span>
-                    Currently open to senior backend and fintech engineering roles.
+                    It's <span id="localTime">--:--</span> in Ulaanbaatar, so I'm <span id="awake">around</span>.
+                    Open to senior backend and fintech roles.
                 </p>
             </div>
         </section>
     </main>
 
     <footer class="site-footer">
-        <span>© 2026 ERDENE.K</span>
-        <span class="footer-meta">Ulaanbaatar, Mongolia — <span id="footerTime">--:--</span> — all systems operational</span>
-        <a href="#top" class="footer-top">Back to top ↑</a>
+        <span>© 2026 Erdene K</span>
+        <a href="#top" class="footer-top">Back to top</a>
     </footer>
 
     <script src="script.js"></script>
